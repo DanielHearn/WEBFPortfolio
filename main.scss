@@ -1,3 +1,100 @@
+$red: #ec6451;
+
 html {
   font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: white;
+  h1, h2, h3 {
+    font-weight: 300;
+  }
+  nav {
+    background: #333332;
+    width: 100%;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1em;
+      margin-bottom: 40px;
+      .initials {
+        font-size: 2.2em;
+        margin: 0;
+        float: left;
+        font-weight: bold;
+      }
+      ul {
+        float: right;
+        padding-right: 1em;
+        margin: 0;
+        list-style: none;
+        li {
+          float: left;
+          padding-right: 1em;
+          padding-left: 0;
+          font-size: 1em;
+          line-height: 3em;
+          a {
+            text-decoration: none;
+            color: #e5e5e5;
+            &:hover {
+              text-decoration: underline;
+              color: white;
+            }
+          }
+          .active {
+            color: white;
+          }
+          }
+        }
+      }
+    }
+  .jumbotron {
+    background-color: $red;
+    padding: 5%;
+    color: white;
+    font-weight: 300;
+    margin-top: -6px;
+    section {
+      margin: 0 auto;
+      text-align: center;
+      h1 {
+        font-size: 3em;
+        margin: 0.5em;
+      }
+      h2 {
+        font-size: 2em;
+      }
+    }
+  }
+  main {
+    color: #333332;
+    background: white;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0.5em;
+    article {
+      padding: 0.6em;
+      text-align: left;
+      font-weight: 400;
+      h4 {
+        font-weight: bold;
+        margin: 0;
+      }
+      h3 {
+        text-decoration: underline;
+      }
+      .quote {
+        font-style: italic;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
