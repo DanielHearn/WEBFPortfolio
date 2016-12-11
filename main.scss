@@ -105,7 +105,7 @@ body {
     color: #333332;
     background: white;
     text-align: center;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0.5em;
     article {
@@ -123,13 +123,13 @@ body {
         font-style: italic;
       }
       img {
-        width: 100%;
+        width: 80%;
       }
     }
   }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 450px) {
   body nav {
     .menu {
       display: none;
@@ -137,7 +137,7 @@ body {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   body nav {
     ul {
       display: none;
