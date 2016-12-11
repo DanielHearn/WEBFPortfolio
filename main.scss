@@ -22,10 +22,40 @@ body {
       padding: 1em;
       margin-bottom: 40px;
       .initials {
-        font-size: 2.2em;
+        font-size: 2.4em;
         margin: 0;
         float: left;
         font-weight: bold;
+      }
+      .menu {
+        padding: 26px 11px;
+        cursor: pointer;
+        margin: 0 auto;
+        height: 2px;
+        float: right;
+        span {
+          height: 4px;
+          width: 35px;
+          border-radius: 2px;
+          background-color: white;
+          position: relative;
+          display: block;
+          transition: all .3s ease-in-out;
+          &:before {
+            top: -10px;
+          }
+          &:after {
+            top: 10px;
+          }
+          &:before, &:after {
+              height: 4px;
+              width: 35px;
+              border-radius: 2px;
+              background-color: white;
+              position: absolute;
+              content: "";
+          }
+        }
       }
       ul {
         float: right;
@@ -36,7 +66,7 @@ body {
           float: left;
           padding-right: 1em;
           padding-left: 0;
-          font-size: 1em;
+          font-size: 1.1em;
           line-height: 3em;
           a {
             text-decoration: none;
@@ -95,6 +125,25 @@ body {
       img {
         width: 100%;
       }
+    }
+  }
+}
+
+@media (min-width: 400px) {
+  body nav {
+    .menu {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  body nav {
+    ul {
+      display: none;
+    }
+    .menu {
+      display: block;
     }
   }
 }
