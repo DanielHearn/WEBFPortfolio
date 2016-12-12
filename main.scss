@@ -88,17 +88,15 @@ body {
     padding: 5%;
     color: white;
     font-weight: 300;
-    margin-top: -6px;
-    section {
-      margin: 0 auto;
-      text-align: center;
-      h1 {
-        font-size: 3em;
-        margin: 0.5em;
-      }
-      h2 {
-        font-size: 2em;
-      }
+    margin: 0 auto;
+    margin-top: -8px;
+    text-align: center;
+    h2 {
+      font-size: 3em;
+      margin: 0.5em;
+    }
+    h3 {
+      font-size: 2em;
     }
   }
   main {
@@ -138,12 +136,22 @@ body {
 }
 
 @media (max-width: 450px) {
-  body nav {
-    ul {
-      display: none;
+  body {
+    nav {
+      ul {
+        display: none;
+      }
+      .menu {
+        display: block;
+      }
     }
-    .menu {
-      display: block;
+    .jumbotron {
+      h2 {
+        font-size: 2.5em;
+      }
+      h3 {
+        font-size: 1.5em;
+      }
     }
   }
 }
