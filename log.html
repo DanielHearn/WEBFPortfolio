@@ -191,23 +191,27 @@
           <ul>
             <li>&lt;picture&gt; = Specifies container for multiple source elements</li>
             <li>&lt;source&gt; = Specifies media element for use with picture, audio and video elements</li>
-            <ul>
-            <li>&lt;picture&gt;</li>
-            <li>&lt;source media="(min-width: 700px)" srcset="i/thisbig.png"&gt;</li>
-            <li>&lt;source media="(min-width: 600px)" srcset="i/thatbig.png"&gt;</li>
-            <li>&lt;/picture&gt;</li>
-            </ul>
+            <li>
+              <ul>
+              <li>&lt;picture&gt;</li>
+              <li>&lt;source media="(min-width: 700px)" srcset="i/thisbig.png"&gt;</li>
+              <li>&lt;source media="(min-width: 600px)" srcset="i/thatbig.png"&gt;</li>
+              <li>&lt;/picture&gt;</li>
+              </ul>
+            </li>
           </ul>
           <p>Solution for video with autoplay, source, as well as alternative if video fails</p>
           <ul>
             <li>&lt;picture&gt; = Specifies container for multiple source elements</li>
             <li>&lt;source&gt; = Specifies media element for use with picture, audio and video elements</li>
+            <li>
             <ul>
               <li>&lt;video autoplay&gt;</li>
               <li>&lt;source&gt; src="i/testcard.webm" type='video/webm; codecs="vp8, vorbis"&gt;&lt;/source&gt;</li>
               <li>&lt;p&gt;Sorry, your browser doesn't do video.&lt;/p&gt;</li>
               <li>&lt;/video&gt;</li>
             </ul>
+            </li>
           </ul>
           <p>Additional css properties learnt:</p>
           <ul>
