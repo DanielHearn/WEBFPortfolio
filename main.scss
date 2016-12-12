@@ -40,7 +40,6 @@ body {
           background-color: white;
           position: relative;
           display: block;
-          transition: all .3s ease-in-out;
           &:before {
             top: -10px;
           }
@@ -123,6 +122,9 @@ body {
       img {
         width: 80%;
       }
+    }
+    video {
+      width: 100%;
     }
   }
 }
