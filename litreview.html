@@ -6,13 +6,22 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="Favicon.png">
+  <script type="text/javascript" src="menu.js"></script>
 </head>
 
 <body>
+  <section id="overlay">
+     <section id="overlay-content">
+        <a onclick="closeNav()" id="overlay-menu"><span></span></a>
+        <a href="index.html">About</a>
+        <a href="litreview.html">Lit Review</a>
+        <a href="log.html">Log</a>
+      </section>
+  </section>
   <nav>
     <section>
       <h2 class="initials">DH</h2>
-      <a href="litreview.html" class="menu"><span></span></a>
+      <a onclick="openNav()" class="menu"><span></span></a>
       <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="litreview.html" class="active">Lit Review</a></li>
@@ -57,7 +66,9 @@
         <p>Vosecky, J., Hong, D., & Shen, V. Y. (2009, July). User identification across multiple social networks. In 2009 First International Conference on Networked Digital Technologies (pp. 360-365). IEEE.</p>
         <p>Zhang, Y., Egelman, S., Cranor, L., & Hong, J. (2006). Phinding phish: Evaluating anti-phishing tools.</p>
       </article>
-      <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fdanielhearn.co.uk%2FWEBFPortfolio%2Flitreview.html" target="_blank">HTML Validator</a>
   </main>
+  <footer>
+    <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fdanielhearn.co.uk%2FWEBFPortfolio%2Findex.html" target="_blank">HTML Validator</a>
+  </footer>
 </body>
 </html>

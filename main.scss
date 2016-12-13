@@ -1,4 +1,5 @@
 $red: #ec6451;
+$dark-grey: #333332;
 
 html {
   font-family: 'Nunito Sans', sans-serif;
@@ -11,16 +12,17 @@ body {
     font-weight: 300;
   }
   nav {
-    background: #333332;
+    background: $dark-grey;
     width: 100%;
     color: white;
     display: inline-block;
     font-weight: bold;
+    position: fixed;
     section {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 1em;
-      margin-bottom: 40px;
+      padding-right: 1em;
+      padding-left: 1em;
       .initials {
         font-size: 2.4em;
         margin: 0;
@@ -33,62 +35,63 @@ body {
         margin: 0 auto;
         height: 2px;
         float: right;
-        span {
-          height: 4px;
-          width: 35px;
-          border-radius: 2px;
-          background-color: white;
-          position: relative;
-          display: block;
-          &:before {
-            top: -10px;
-          }
-          &:after {
-            top: 10px;
-          }
-          &:before, &:after {
-              height: 4px;
-              width: 35px;
-              border-radius: 2px;
-              background-color: white;
-              position: absolute;
-              content: "";
-          }
-        }
       }
       ul {
         float: right;
-        padding-right: 1em;
         margin: 0;
         list-style: none;
         li {
           float: left;
-          padding-right: 1em;
-          padding-left: 0;
-          font-size: 1.1em;
-          line-height: 3em;
           a {
             text-decoration: none;
-            color: #e5e5e5;
+            color: white;
+            padding-right: 1em;
+            padding-left: 0.8em;
+            padding-top: 0.8em;
+            padding-bottom: 0.8em;
+            font-size: 1.1em;
+            line-height: 3em;
+            text-align: center;
             &:hover {
-              text-decoration: underline;
-              color: white;
+              background: #232322;
             }
           }
           .active {
-            color: white;
+            text-decoration: underline;
           }
           }
         }
       }
     }
+    span {
+      height: 4px;
+      width: 35px;
+      border-radius: 2px;
+      background-color: white;
+      position: relative;
+      display: block;
+      &:before {
+        top: -10px;
+      }
+      &:after {
+        top: 10px;
+      }
+      &:before, &:after {
+          height: 4px;
+          width: 35px;
+          border-radius: 2px;
+          background-color: white;
+          position: absolute;
+          content: "";
+      }
+    }
   .jumbotron {
     background-color: $red;
     padding: 5%;
+    padding-top: 8em;
     color: white;
     font-weight: 300;
     margin: 0 auto;
-    margin-top: -8px;
     text-align: center;
     h1 {
       font-size: 3em;
@@ -99,12 +102,12 @@ body {
     }
   }
   main {
-    color: #333332;
+    color: $dark-grey;
     background: white;
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0.5em;
+    padding: 1em;
     article {
       padding: 0.6em;
       text-align: left;
@@ -125,8 +128,54 @@ body {
     }
     video {
       width: 100%;
+      margin-bottom: 30vh
     }
   }
+  footer {
+    background: $dark-grey;
+    padding: 1em;
+    text-align: center;
+    a {
+      color: white;
+    }
+   }
+  #overlay {
+      height: 0vh;
+      background: $red;
+      z-index: 2;
+      #overlay-content {
+        padding-top: 30vh;
+        display: none;
+          #overlay-menu{
+            top: 3vh;
+            right: 5vh;
+            position: absolute;
+            cursor: pointer;
+            span {
+              background: transparent;
+              &:before {
+                transform: rotate(45deg) translate(7px, 7px);
+              }
+              &:after {
+                transform: rotate(-45deg) translate(7px, -7px);
+              }
+            }
+          }
+          a {
+            z-index: 5;
+            display: block;
+            color: white;
+            text-align: center;
+            margin: auto;
+            padding-bottom: 0.8em;
+            text-decoration: none;
+            font-size: 1.5em;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+      }
+    }
 }
 
 @media (min-width: 450px) {
