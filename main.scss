@@ -140,15 +140,17 @@ body {
     }
    }
   #overlay {
-      height: 0vh;
+      height: 0;
+      width: 100vw;
       background: $red;
       z-index: 2;
+      position: fixed;
       #overlay-content {
         padding-top: 30vh;
         display: none;
           #overlay-menu{
-            top: 3vh;
-            right: 5vh;
+            top: 4vh;
+            right: 4vh;
             position: absolute;
             cursor: pointer;
             span {
