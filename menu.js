@@ -1,19 +1,23 @@
-var mainbottom = $('#main').offset().top + $('#main').height();
+$(document).ready(function () {
+  $("#overlay-button").on('click',function () {
+    $(this).toggleClass('active');
+    $("#overlay").toggleClass('active');
+  });
 
-// on scroll,
-$(window).on('scroll',function(){
 
-    // we round here to reduce a little workload
-    stop = Math.round($(window).scrollTop());
-    if (stop > mainbottom) {
-        $('.nav').addClass('past-main');
-    } else {
-        $('.nav').removeClass('past-main');
-   }
+  var navbottom = $('nav').offset().top;
 
+  var mainbottom = $('main').offset().top - navbottom;
+
+  $(window).on('scroll',function(){
+  console.log(navbottom);
+      var stop = Math.round($(window).scrollTop());
+
+      if (stop > mainbottom) {
+          $('nav').addClass('past-main');
+      } else {
+          $('nav').removeClass('past-main');
+      }
+
+  });
 });
-
-function nav() {
-   document.getElementById("overlay").classList.toggle("active");
-   document.getElementById("overlay-button").classList.toggle("active");
-};

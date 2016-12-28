@@ -6,66 +6,69 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="Favicon.png">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script type="text/javascript" src="menu.js"></script>
 </head>
 
 <body>
-  <section id="overlay">
-     <section id="overlay-content">
-        <a onclick="closeNav()" id="overlay-menu"><span></span></a>
-        <a href="index.html">About</a>
-        <a href="litreview.html">Lit Review</a>
-        <a href="log.html">Log</a>
-      </section>
-  </section>
   <nav>
     <section>
       <h2 class="initials">DH</h2>
-      <a onclick="openNav()" class="menu"><span></span></a>
+      <a id="overlay-button" href="#" ><span></span></a>
       <ul>
-        <li><a href="index.html">About</a></li>
+        <li><a href="index.html" class="active">About</a></li>
         <li><a href="litreview.html">Lit Review</a></li>
-        <li><a href="log.html" class="active">Log</a></li>
+        <li><a href="log.html">Log</a></li>
       </ul>
     </section>
   </nav>
+  <div id="overlay">
+   <ul>
+     <li><a href="#">Home</a></li>
+     <li><a href="#">About</a></li>
+     <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
   <section class="jumbotron">
+    <div class="overlay">
+      <div class="background"></div>
+    </div>
     <h1>Discovery Log</h1>
     <h2>Last updated - 11/12/16</h2>
   </section>
   <main>
-    <article>
+    <article class="text">
         <h3>29/9/16</h3>
-        <h4>Unix Commands for vm:</h4>
-        <ul>
-          <li><strong>ls</strong> = list files</li>
-          <li><strong>mkdir</strong> = make directory</li>
-          <li><strong>cd</strong> = change current directory</li>
-          <li><strong>rm</strong> = remove file</li>
-          <li><strong>pwd</strong> = print current directory</li>
-          <li><strong>cat</strong> = display file</li>
-          <li><strong>touch</strong> = create / update file</li>
-          <li><strong>mv</strong> = move file</li>
-          <li><strong>cp</strong> = copy file</li>
-          <li><strong>nano</strong> = text editor</li>
-          <li><strong>http-server</strong> = launch web server</li>
-        </ul>
+          <h4>Unix Commands for vm:</h4>
+          <ul>
+            <li><strong>ls</strong> = list files</li>
+            <li><strong>mkdir</strong> = make directory</li>
+            <li><strong>cd</strong> = change current directory</li>
+            <li><strong>rm</strong> = remove file</li>
+            <li><strong>pwd</strong> = print current directory</li>
+            <li><strong>cat</strong> = display file</li>
+            <li><strong>touch</strong> = create / update file</li>
+            <li><strong>mv</strong> = move file</li>
+            <li><strong>cp</strong> = copy file</li>
+            <li><strong>nano</strong> = text editor</li>
+            <li><strong>http-server</strong> = launch web server</li>
+          </ul>
     </article>
 
-    <article>
+    <article class="text">
         <h3>6/10/16</h3>
         <h4>Social Engineering Techniques</h4>
-        <ul>
-          <li>Phishing, impersonation</li>
-          <li>Physical access (tailgating)</li>
-          <li>Shoulder surfing</li>
-          <li>Dumpster diving, stealing important information</li>
-          <li>Fake software, trojans</li>
-          <li>Quid pro quo, baiting, pretexting</li>
-        </ul>
+          <ul>
+            <li>Phishing, impersonation</li>
+            <li>Physical access (tailgating)</li>
+            <li>Shoulder surfing</li>
+            <li>Dumpster diving, stealing important information</li>
+            <li>Fake software, trojans</li>
+            <li>Quid pro quo, baiting, pretexting</li>
+          </ul>
     </article>
 
-    <article>
+    <article class="text">
         <h3>18/10/16</h3>
         <h4>Reviewing Literature</h4>
         <p>Lit review identifies:</p>
@@ -86,7 +89,7 @@
         </ul>
     </article>
 
-    <article>
+    <article class="text">
         <h3>27/10/16</h3>
         <h4>Academic Writing</h4>
         <p>Writing academically:</p>
@@ -113,7 +116,7 @@
         <p class="quote">“similarity to the consumer.” (Taylor et al. (2011, p.61).</p>
     </article>
 
-    <article>
+    <article class="text">
         <h3>10/11/16</h3>
         <h4>Markup Introduction</h4>
         <p>HTML - HyperText Markup Language</p>
@@ -125,7 +128,7 @@
         </ul>
     </article>
 
-    <article>
+    <article class="text">
         <h3>17/11/16</h3>
         <h4>Types of Markup</h4>
         <p>Markup: Added to text to help convey its meaning</p>
@@ -150,7 +153,7 @@
         </ul>
     </article>
 
-    <article>
+    <article class="text">
         <h3>24/11/16</h3>
         <h4>Addressing on the Web</h4>
         <p>Anatomy of URL</p>
@@ -173,7 +176,7 @@
         <p>Target attribute: Target =”_blank”, open link in new window</p>
     </article>
 
-    <article>
+    <article class="text">
         <h3>1/12/16</h3>
         <h4>Images in HTML</h4>
         <p><strong>&lt;img&gt;</strong></p>
@@ -220,7 +223,7 @@
         </ul>
     </article>
 
-    <article>
+    <article class="text">
         <h3>8/12/16</h3>
         <h4>Productivity and efficiency</h4>
           <p>Shortcuts:</p>

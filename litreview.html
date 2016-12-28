@@ -6,35 +6,38 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="Favicon.png">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script type="text/javascript" src="menu.js"></script>
 </head>
 
 <body>
-  <section id="overlay">
-     <section id="overlay-content">
-        <a onclick="closeNav()" id="overlay-menu"><span></span></a>
-        <a href="index.html">About</a>
-        <a href="litreview.html">Lit Review</a>
-        <a href="log.html">Log</a>
-      </section>
-  </section>
   <nav>
     <section>
       <h2 class="initials">DH</h2>
-      <a onclick="openNav()" class="menu"><span></span></a>
+      <a id="overlay-button" href="#" ><span></span></a>
       <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="litreview.html" class="active">Lit Review</a></li>
+        <li><a href="index.html" class="active">About</a></li>
+        <li><a href="litreview.html">Lit Review</a></li>
         <li><a href="log.html">Log</a></li>
       </ul>
     </section>
   </nav>
+  <div id="overlay">
+   <ul>
+     <li><a href="#">Home</a></li>
+     <li><a href="#">About</a></li>
+     <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
   <section class="jumbotron">
-      <h1>Literature Review</h1>
-      <h2>Mitigating personal information exposure on the web</h2>
+    <div class="overlay">
+      <div class="background"></div>
+    </div>
+    <h1>Literature Review</h1>
+    <h2>Mitigating personal information exposure on the web</h2>
   </section>
   <main>
-      <article>
+      <article class="text">
         <h4>Mitigating personal information exposure on the web</h4>
         <p>Numerous studies have investigated mitigating personal information (PI) exposure on the web. These studies cover a variety of themes including the types of PI available on the web, mitigating PI exposure on social networks, and mitigating PI exposure from phishing attacks. This review focuses on the risks of exposure and the mitigation methods for these risks.</p>
 

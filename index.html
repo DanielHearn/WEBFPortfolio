@@ -6,6 +6,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="Favicon.png">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script type="text/javascript" src="menu.js"></script>
 </head>
 
@@ -13,7 +14,7 @@
   <nav>
     <section>
       <h2 class="initials">DH</h2>
-      <a onclick="nav()" id="overlay-button" href="#"><span></span></a>
+      <a id="overlay-button"><span></span></a>
       <ul>
         <li><a href="index.html" class="active">About</a></li>
         <li><a href="litreview.html">Lit Review</a></li>
@@ -23,9 +24,9 @@
   </nav>
   <div id="overlay">
    <ul>
-     <li><a href="#">Home</a></li>
-     <li><a href="#">About</a></li>
-     <li><a href="#">Contact</a></li>
+     <li><a href="index.html">Home</a></li>
+     <li><a href="litreview.html">About</a></li>
+     <li><a href="log.html">Contact</a></li>
     </ul>
   </div>
   <section class="jumbotron">
@@ -34,33 +35,27 @@
     </div>
     <h1>Daniel Hearn</h1>
     <h2>Computer Science - Portsmouth Uni</h2>
+    <a href="#" class="button" id="viewwork"><strong>View my work</strong></a>
   </section>
-  <main>
-    <section class="litreview">
-          <h3>Lit Review</h3>
-    </section>
-    <section class="log">
-          <h3>Log</h3>
-    </section>
+  <main id="main">
+    <article class="litreview">
+      <section>
+            <h3>Literature Review</h3>
+            <h4>A literature review covering the topic "Mitigating personal information exposure on the web",
+            fully marked up in html.</h4>
+            <a href="litreview.html" class="button"><strong>View Review</strong></a>
+      </section>
+    </article>
+    <article class="log">
+      <section>
+            <h3>Discovery Log</h3>
+            <h4>My discovery log for WebF fully marked up in html, this log is updated weekly to cover the
+            new knowledge i have gained during the week.</h4>
+            <a href="log.html" class="button"><strong>View Log</strong></a>
+      </section>
+    </article>
   </main>
   <footer>
     <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fdanielhearn.co.uk%2FWEBFPortfolio%2Findex.html" target="_blank">HTML Validator</a>
   </footer>
 </body>
-
-
-<!--
-  <section class="jumbotron">
-    <h1>Daniel Hearn</h1>
-    <h2>Computer Science - Portsmouth Uni</h2>
-  </section>
-  <main>
-    <section>
-          <h3>About</h3>
-    </section>
-  </main>
-  <footer>
-    <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fdanielhearn.co.uk%2FWEBFPortfolio%2Findex.html" target="_blank">HTML Validator</a>
-  </footer>
-</body>
-</html>
