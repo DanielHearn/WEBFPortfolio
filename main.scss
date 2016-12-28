@@ -143,6 +143,10 @@ body {
       margin: 0 auto;
       padding: 0;
       text-align: left;
+      h4 {
+        font-weight: 600;
+        margin-bottom: 1em;
+      }
     }
     .log-item {
       border-bottom: 2px solid $dark-grey;
