@@ -1,6 +1,8 @@
 $accent: #ec6451;
 $accent-light: #f37260;
 $dark-grey: #22313F;
+$darker-grey: #0d1319;
+$grey: #293846;
 $white: #FFFFFA;
 
 html {
@@ -12,6 +14,7 @@ body {
   background: $dark-grey;
   h1, h2, h3 {
     font-weight: 300;
+    font-size: 1em;
   }
   .past-main {
     background: $dark-grey;
@@ -112,7 +115,7 @@ body {
       z-index: -1;
       .background {
          background: $dark-grey;
-         background-image: url("https://static.pexels.com/photos/1227/night-dark-blur-blurred.jpg");
+         background-image: url("background.jpg");
          background-size: cover;
          width: 100%;
          height: 100%;
@@ -120,7 +123,7 @@ body {
         }
       }
     h1 {
-      font-size: 4em;
+      font-size: 4.5em;
       margin: 0.5em;
       text-transform: uppercase;
     }
@@ -135,17 +138,26 @@ body {
     background: $white;
     .text {
       background: $white;
-      color: $dark-grey;
+      color: $darker-grey;
       max-width: 800px;
       margin: 0 auto;
       padding: 1em;
       text-align: left;
+    }
+    .log-item {
+      border-bottom: 2px solid $dark-grey;
     }
     article {
       color: white;
       text-align: center;
       font-weight: 300;
       padding: 5%;
+      h3 {
+        font-size: 1.5em;
+      }
+      h4 {
+        font-size: 1.2em;
+      }
       section {
         padding-bottom: 5%;
         max-width: 800px;
@@ -163,15 +175,43 @@ body {
       .quote {
         font-style: italic;
       }
-      img {
+      .profile {
+        width: 60%;
+        border-radius: 50%;
+      }
+      img, video {
         width: 80%;
+      }
+      .dark {
+        background: $dark-grey;
+        border: 2px solid $dark-grey;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+        &:hover {
+          background: $grey;
+          border: 2px solid $grey;
+        }
+      }
+    }
+    .intro {
+      padding-top: 2%;
+      padding-bottom: 2%;
+      section {
+        padding-bottom: 0;
+        h4 {
+          margin-top: 1.5em;
+          margin-bottom: 1.5em;
+        }
       }
     }
     .log {
       background: #4e5486;
     }
     .litreview {
-      background: #7dcc93;
+      background: #60c57c;
+    }
+    .about {
+      background: $accent;
     }
   }
   footer {
@@ -267,7 +307,8 @@ body {
 
 @keyframes zoom {
   0% {transform: scale(1);}
-  100% {transform: scale(1.1);}
+  50% {transform: scale(1.05);}
+  100% {transform: scale(1);}
 }
 
 @media (min-width: 500px) and (min-height: 500px){
@@ -299,13 +340,33 @@ body {
     }
     .jumbotron {
         padding-top: 25%;
-        padding-bottom: 15%;
+        padding-bottom: 20%;
         h1 {
-          font-size: 2.5em;
+          font-size: 2.3em;
         }
         h2 {
           font-size: 1.5em;
         }
+    }
+    main {
+      article {
+        section {
+          padding-bottom: 15%;
+          h3 {
+            font-size: 1.5em;
+          }
+          h4 {
+            font-size: 1em;
+          }
+        }
+        video, img {
+          width: 100%;
+        }
+      }
+    }
+    .button {
+      font-size: 1em;
+      padding: 0.8em 1.2em;
     }
   }
 }

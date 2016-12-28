@@ -1,16 +1,22 @@
 $(document).ready(function () {
-  $("#overlay-button").on('click',function () {
+  $("#overlay-button").click(function() {
     $(this).toggleClass('active');
     $("#overlay").toggleClass('active');
   });
 
+  function scrollToAnchor(aid){
+    var aTag = $("a[name='"+ aid +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+  }
+
+  $("#view-about").click(function() {
+      scrollToAnchor('about');
+  });
 
   var navbottom = $('nav').offset().top;
-
-  var mainbottom = $('main').offset().top - navbottom;
+  var mainbottom = $('main').offset().top - 100;
 
   $(window).on('scroll',function(){
-  console.log(navbottom);
       var stop = Math.round($(window).scrollTop());
 
       if (stop > mainbottom) {
