@@ -12,24 +12,26 @@
 </head>
 
 <body>
-  <nav>
-    <section>
-      <a href="index.html"><h2 class="initials">DH</h2></a>
-      <a id="overlay-button"><span></span></a>
-      <ul>
-        <li><a href="index.html" class="active">About</a></li>
-        <li><a href="litreview.html">Lit Review</a></li>
-        <li><a href="log.html">Log</a></li>
+  <header>
+    <nav>
+      <section>
+        <a href="index.html"><h2 class="initials">DH</h2></a>
+        <a id="overlay-button"><span></span></a>
+        <ul>
+          <li><a href="index.html" class="active">About</a></li>
+          <li><a href="litreview.html">Lit Review</a></li>
+          <li><a href="log.html">Log</a></li>
+        </ul>
+      </section>
+    </nav>
+    <div id="overlay">
+     <ul>
+       <li><a href="index.html">About</a></li>
+       <li><a href="litreview.html">Lit Review</a></li>
+       <li><a href="log.html">Log</a></li>
       </ul>
-    </section>
-  </nav>
-  <div id="overlay">
-   <ul>
-     <li><a href="index.html">About</a></li>
-     <li><a href="litreview.html">Lit Review</a></li>
-     <li><a href="log.html">Log</a></li>
-    </ul>
-  </div>
+    </div>
+</header>
   <section class="jumbotron">
     <div class="overlay">
       <div class="background"></div>
@@ -39,9 +41,9 @@
     <a class="button" id="view-about"><strong>Find out more</strong></a>
   </section>
   <a id="about"></a>
-  <main id="main">
-    <article class="accent">
-      <section>
+  <main>
+    <section class="accent">
+      <div class="wrap">
             <img src="test1.jpg" alt="Image of lit review" class="profile">
             <h3>About Me</h3>
             <h4>I'm a student at the University of Portsmouth currently in my first year studying computer science,
@@ -49,26 +51,24 @@
              To view some of my other work click on the links below.</h4>
               <a href="http://codepen.io/danhearn/" class="button dark"><strong>Codepen</strong></a>
               <a href="https://github.com/DanielHearn" class="button dark"><strong>Github</strong></a>
-      </section>
-    </article>
-    <article class="litreview">
-      <section>
-            <img src="test1.jpg" alt="Image of lit review">
+      </div>
+    </section>
+    <section class="litreview">
+      <div class="wrap">
             <h3>Literature Review</h3>
             <h4>My literature review for WebF covering the topic "Mitigating personal information exposure on the web",
             fully marked up in html.</h4>
             <a href="litreview.html" class="button dark"><strong>View Review</strong></a>
-      </section>
-    </article>
-    <article class="log">
-      <section>
-            <img src="test2.jpg" alt="Image of lit review">
+      </div>
+    </section>
+    <section class="log">
+      <div class="wrap">
             <h3>Discovery Log</h3>
             <h4>My discovery log for WebF fully marked up in html, this log is updated weekly to cover the
             new knowledge and skills i have gained during the week.</h4>
             <a href="log.html" class="button dark"><strong>View Log</strong></a>
-      </section>
-    </article>
+      </div>
+    </section>
   </main>
   <footer>
     <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fdanielhearn.co.uk%2FWEBFPortfolio%2Findex.html" target="_blank">HTML Validator</a>
