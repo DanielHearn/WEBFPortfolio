@@ -221,16 +221,10 @@ body {
       div.wrap {
         padding: 0;
         margin-bottom: 0;
+        h4 {
+          margin-bottom: 1.2em;
+        }
       }
-    }
-    .log {
-      background: $log;
-    }
-    .litreview {
-      background: $litreview;
-    }
-    .accent {
-      background: $accent;
     }
     .log, .litreview, .accent {
       color: white;
@@ -241,7 +235,16 @@ body {
         }
       }
     }
-
+    .log {
+      background: $log;
+    }
+    .litreview {
+      background: $litreview;
+    }
+    .accent {
+      background: $accent;
+      color: white;
+    }
   footer {
     background: $dark-grey;
     padding: 2em;
