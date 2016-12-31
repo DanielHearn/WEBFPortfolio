@@ -149,9 +149,6 @@ body {
       text-align: center;
       font-weight: 300;
       padding: 5%;
-      h4 {
-        //font-size: 1em;
-      }
     }
     .text {
       background: $white;
@@ -180,7 +177,6 @@ body {
       margin: 0 auto;
       h3 {
         font-weight: bold;
-        //font-size: 1.4em;
         margin: 0.5em 0;
       }
       h4 {
@@ -211,12 +207,6 @@ body {
       margin-left: 0.5em;
       &:hover {
         background: $grey;
-      }
-    }
-    .log, .litreview, .accent {
-      color: white;
-      .container {
-      //  padding-bottom: 2em;
       }
     }
     .intro {
