@@ -3,7 +3,7 @@ $accent-light: #ff816f;
 $dark-grey: #22313F;
 $darker-grey: #0d1319;
 $grey: #293846;
-$white: #fbfbf7;
+$white: #fffff9;
 $litreview: #86d07d;
 $log: #3c6188;
 
@@ -14,9 +14,15 @@ html {
 body {
   margin: 0;
   background: $white;
-  h1, h2, h3 {
+  h1, h2 {
     font-weight: 300;
     font-size: 1em;
+  }
+  h3 {
+    font-size: 1.4em;
+  }
+  p {
+    font-size: 1.1em;
   }
   nav {
     background: $dark-grey;
@@ -58,7 +64,7 @@ body {
           a {
             text-decoration: none;
             color: white;
-            font-size: 1.2em;
+            font-size: 1.1em;
             line-height: 3em;
             text-align: center;
             position: relative;
@@ -86,12 +92,14 @@ body {
     background-color: $accent;
     text-decoration: none;
     color: white;
-    font-size:1em;
+    font-size: 1em;
     font-weight: 400;
     transition: all 0.4s;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
+    display: inline-block;
+    margin-top: 1em;
     &:hover {
       background-color: $accent-light;
     }
@@ -123,12 +131,12 @@ body {
         }
       }
     h1 {
-      font-size: 4.5em;
+      font-size: 4em;
       margin: 0.5em;
       text-transform: uppercase;
     }
     h2 {
-      font-size: 2.5em;
+      font-size: 2em;
       margin-bottom: 2em;
     }
   }
@@ -136,6 +144,15 @@ body {
     text-align: center;
     margin: 0 auto;
     background: $white;
+    section {
+      color: white;
+      text-align: center;
+      font-weight: 300;
+      padding: 5%;
+      h4 {
+        //font-size: 1em;
+      }
+    }
     .text {
       background: $white;
       color: $darker-grey;
@@ -153,79 +170,63 @@ body {
         font-weight: 600;
         margin-bottom: 1em;
       }
-    }
-    .log-item {
-      border-bottom: 2px solid $dark-grey;
+      p {
+        font-size: 1em;
+      }
     }
     .container {
-      background: $white;
-      color: $darker-grey;
       max-width: 800px;
       padding: 1em;
       margin: 0 auto;
-    }
-    section {
-      color: white;
-      text-align: center;
-      font-weight: 300;
-      padding: 5%;
       h3 {
-        font-size: 1.5em;
+        font-weight: bold;
+        //font-size: 1.4em;
+        margin: 0.5em 0;
       }
       h4 {
-        font-size: 1.2em;
+        font-weight: bold;
+        font-size: 1.1em;
       }
     }
-      .wrap {
-        max-width: 800px;
-        margin: 0 auto;
-        font-size: 1em;
-        h3 {
-          font-weight: bold;
-          font-size: 1.6em;
-          margin: 0.5em 0;
-        }
-        h4 {
-          font-size: 1.1em;
-          font-weight: 300;
-        }
+    .quote {
+      font-style: italic;
+    }
+    .profile {
+      width: 60%;
+      border-radius: 50%;
+    }
+    .log-item {
+      border-bottom: 2px solid $dark-grey;
+      h4 {
+        font-size: 1.1em;
+        font-weight: bold;
       }
-      .quote {
-        font-style: italic;
+    }
+    img, video {
+      width: 80%;
+    }
+    .dark {
+      background: $dark-grey;
+      margin-right: 0.5em;
+      margin-left: 0.5em;
+      &:hover {
+        background: $grey;
       }
-      .profile {
-        width: 60%;
-        border-radius: 50%;
-      }
-      img, video {
-        width: 80%;
-      }
-      .dark {
-        background: $dark-grey;
-        margin-right: 0.5em;
-        margin-left: 0.5em;
-        &:hover {
-          background: $grey;
-        }
+    }
+    .log, .litreview, .accent {
+      color: white;
+      .container {
+      //  padding-bottom: 2em;
       }
     }
     .intro {
       padding-top: 2%;
       padding-bottom: 2%;
-      div.wrap {
+      font-size: 1em;
+      .container {
         padding: 0;
-        margin-bottom: 0;
         h4 {
-          margin-bottom: 1.2em;
-        }
-      }
-    }
-    .log, .litreview, .accent {
-      color: white;
-      .wrap {
-        padding-bottom: 2em;
-        h4 {
-          margin-bottom: 2.5em;
+          font-weight: 300;
         }
       }
     }
@@ -239,6 +240,7 @@ body {
       background: $accent;
       color: white;
     }
+  }
   footer {
     background: $dark-grey;
     padding: 2em;
@@ -346,9 +348,6 @@ body {
     }
     #overlay.active {
       visibility: hidden;
-    }
-    .text {
-      font-size: 1.1em;
     }
   }
 }
