@@ -7,8 +7,10 @@
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700" rel="stylesheet">
   <link rel="icon" type="image/png" href="Favicon.png">
+  <!--
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script type="text/javascript" src="menu.js"></script>
+  -->
 </head>
 
 <body>
@@ -16,21 +18,17 @@
     <nav>
       <section>
         <a href="index.html"><h2 class="initials">DH</h2></a>
-        <a id="overlay-button"><span></span></a>
+        <input type="checkbox" id="overlay-input"/>
+        <label for="overlay-input" id="overlay-button"><span></span></label>
         <ul>
-          <li><a href="index.html">About</a></li>
-          <li><a href="litreview.html" class="active">Lit Review</a></li>
-          <li><a href="log.html">Log</a></li>
+          <div>
+            <li><a href="index.html" class="active">About</a></li>
+            <li><a href="litreview.html">Lit Review</a></li>
+            <li><a href="log.html">Log</a></li>
+          </div>
         </ul>
       </section>
     </nav>
-    <div id="overlay">
-     <ul>
-       <li><a href="index.html">About</a></li>
-       <li><a href="litreview.html">Lit Review</a></li>
-       <li><a href="log.html">Log</a></li>
-      </ul>
-    </div>
   </header>
   <section class="jumbotron">
     <div class="background">
@@ -239,7 +237,7 @@
         </ul>
         <video controls muted>
           <source src="video.webm" type="video/webm">
-          <source src="video.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+          <source src="video.mp4" type="video/mp4; codecs='avc1.4D401E, mp4a.40.2'">
           <p>Sorry, your browser doesn't do video.</p>
         </video>
         <p>Additional css properties learnt:</p>
