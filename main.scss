@@ -242,7 +242,10 @@ footer {
   float:right;
   padding-top: 1.5em;
   padding-bottom: 1em;
-  display:none;
+  display: none;
+  z-index: 5;
+  cursor: pointer;
+  user-select: none;
   span {
       height: 0.1em;
       width: 35px;
@@ -266,23 +269,35 @@ footer {
           transition: all .2s ease-in-out;
       }
     }
-  &.active {
-    &:hover span, span{
-      background: transparent;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+/*
+input[type=checkbox]:checked ~ #overlay {
+  visibility: visible;
+  opacity: 1;
+}
+*/
+
+input[type=checkbox]:checked ~ #overlay-button {
+  &:hover span, span{
+    background: transparent;
+  }
+  span {
+    &:before {
+      transform: rotate(45deg) translate(7px, 7px);
+      opacity: 1;
     }
-    span {
-      &:before {
-        transform: rotate(45deg) translate(7px, 7px);
-        opacity: 1;
-      }
-      &:after {
-        transform: rotate(-45deg) translate(7px, -7px);
-      }
+    &:after {
+      transform: rotate(-45deg) translate(7px, -7px);
     }
   }
 }
 
-
+/*
 #overlay {
   height: 100vh;
   width: 100vw;
@@ -292,10 +307,6 @@ footer {
   opacity: 0;
   position: fixed;
   transition: opacity 0.2s;
-  &.active {
-    visibility: visible;
-    opacity: 1;
-  }
   ul {
     display: flex;
     justify-content: center;
@@ -310,6 +321,7 @@ footer {
       a {
         color: white;
         text-decoration: none;
+        font-weight: 300;
         font-size: 1.4em;
         &:hover {
           text-decoration: underline;
@@ -318,6 +330,7 @@ footer {
     }
   }
 }
+*/
 
 @keyframes zoom {
   0% {transform: scale(1);}
@@ -345,10 +358,24 @@ footer {
         padding-top: 0.4em;
       }
       ul {
-        display: none;
+      display: none;
       }
       #overlay-button {
         display: block;
+      }
+      input[type=checkbox]:checked ~ ul {
+        padding-top: 0.2em;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        li {
+          text-align: center;
+          display: block;
+        }
       }
     }
     .jumbotron {
