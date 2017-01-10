@@ -275,13 +275,6 @@ input[type=checkbox] {
   display: none;
 }
 
-/*
-input[type=checkbox]:checked ~ #overlay {
-  visibility: visible;
-  opacity: 1;
-}
-*/
-
 input[type=checkbox]:checked ~ #overlay-button {
   &:hover span, span{
     background: transparent;
@@ -296,41 +289,6 @@ input[type=checkbox]:checked ~ #overlay-button {
     }
   }
 }
-
-/*
-#overlay {
-  height: 100vh;
-  width: 100vw;
-  background: #ec6451;
-  z-index: 2;
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  transition: opacity 0.2s;
-  ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    height: 100vh;
-    padding-left: 0;
-    list-style-type: none;
-    li {
-      padding: 1em;
-      a {
-        color: white;
-        text-decoration: none;
-        font-weight: 300;
-        font-size: 1.4em;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
-*/
 
 @keyframes zoom {
   0% {transform: scale(1);}
