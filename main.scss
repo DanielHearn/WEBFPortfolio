@@ -329,11 +329,11 @@ input[type=checkbox]:checked ~ #overlay-button {
         flex-direction: column;
         width: 100%;
         text-align: center;
-        height: 100vh;
+        height: 120vh;
+        margin-top: -20vh;
         li {
           text-align: center;
           display: block;
-          margin-top: -20vh;
           height: 4em;
           a {
             font-weight: 300;
