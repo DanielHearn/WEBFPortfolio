@@ -80,6 +80,7 @@ nav {
         float: left;
         padding-right: 1.2em;
         padding-left: 1.2em;
+        height: 3em;
         a {
           text-decoration: none;
           color: white;
@@ -325,22 +326,18 @@ input[type=checkbox]:checked ~ #overlay-button {
         padding-left: 0;
         display: flex;
         justify-content: center;
+        flex-direction: column;
         width: 100%;
+        text-align: center;
         height: 100vh;
-        div {
-          margin-top: -15vh;
-          align-items: center;
-          flex-direction: column;
+        li {
           text-align: center;
-          display: flex;
-          justify-content: center;
-          li {
-            text-align: center;
-            display: block;
-            a {
-              font-weight: 300;
-              font-size: 1.4em;
-            }
+          display: block;
+          margin-top: -20vh;
+          height: 4em;
+          a {
+            font-weight: 300;
+            font-size: 1.4em;
           }
         }
       }
