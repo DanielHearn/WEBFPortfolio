@@ -218,12 +218,26 @@ main {
       }
     }
   }
-  .log {
+
+  .work {
+    color: $dark-grey;
+    h4 {
+      padding-top: 2em;
+      text-decoration: underline;
+    }
+  }
+
+  .italics {
+    font-style: italic;
+  }
+
+  /*.log {
     background: $log;
   }
   .litreview {
     background: $litreview;
   }
+  */
   .accent {
     background: $accent;
   }
