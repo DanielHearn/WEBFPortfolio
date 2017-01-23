@@ -156,6 +156,21 @@ main {
     font-weight: 300;
     padding: 5%;
   }
+  .container {
+    max-width: 800px;
+    padding: 1em;
+    margin: 0 auto;
+    font-size: 1em;
+    h3 {
+      font-weight: bold;
+      margin: 0.5em 0;
+    }
+    h4 {
+      font-weight: 600;
+      margin-bottom: 1em;
+      font-size: 1.1em;
+    }
+  }
   .text {
     background: $white;
     color: $darker-grey;
@@ -172,20 +187,8 @@ main {
     p {
       font-size: 1em;
     }
-  }
-  .container {
-    max-width: 800px;
-    padding: 1em;
-    margin: 0 auto;
-    font-size: 1em;
-    h3 {
-      font-weight: bold;
-      margin: 0.5em 0;
-    }
     h4 {
-      font-weight: 600;
-      margin-bottom: 1em;
-      font-size: 1.1em;
+      font-size: 1.2em;
     }
   }
   q {
