@@ -14,7 +14,7 @@
       <section>
         <a href="index.html"><h2 id="initials">DH</h2></a>
         <input type="checkbox" id="overlay-input"/>
-        <label for="overlay-input" id="overlay-button"><span></span></label>
+        <label aria-label="Menu toggle" for="overlay-input" id="overlay-button"><span></span></label>
         <ul>
             <li><a href="index.html" >About</a></li>
             <li><a href="litreview.html">Lit Review</a></li>
@@ -229,10 +229,11 @@
           </ul>
           </li>
         </ul>
-        <video controls muted>
+        <video aria-label="Video showing view outside my window"  controls muted preload="metadata">
           <source src="vid/video.webm" type="video/webm">
           <source src="vid/video.mp4" type="video/mp4">
-          <p>Sorry, your browser doesn't do video.</p>
+          <track kind="captions" src="captions.vtt" srclang="en" default>
+          <p>Sorry, you browser cannot load this video.</p>
         </video>
         <p>Additional css properties learnt:</p>
         <ul>
