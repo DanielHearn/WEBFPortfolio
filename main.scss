@@ -21,7 +21,12 @@ body {
   h3 {
     font-size: 1.8em;
   }
-  p {
+  h4 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+  p, code {
     font-size: 1.1em;
   }
   .button {
@@ -39,6 +44,14 @@ body {
     margin-top: 1em;
     &:hover {
       background-color: $accent-light;
+    }
+  }
+  .dark {
+    background: $dark-grey;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    &:hover {
+      background: $grey;
     }
   }
 }
@@ -148,7 +161,6 @@ main {
   background: $white;
   section {
     color: white;
-    text-align: center;
     font-weight: 300;
     padding: 5%;
   }
@@ -161,10 +173,6 @@ main {
       font-weight: bold;
       margin: 0.5em 0;
     }
-    h4 {
-      font-weight: 600;
-      margin-bottom: 1em;
-    }
   }
   .text {
     background: $white;
@@ -173,71 +181,18 @@ main {
     margin: 0 auto;
     padding: 0;
     text-align: left;
-    section {
-      text-align: left;
-    }
-    h3 {
-      text-decoration: underline;
-      font-size: 1.6em;
-    }
     p {
       font-size: 1em;
-    }
-    h4 {
-      font-size: 1.2em;
     }
   }
   q {
     font-style: italic;
   }
-  #profile {
-    width: 60%;
-    border-radius: 50%;
-  }
-  .log-item {
-    border-bottom: 2px solid $dark-grey;
-  }
-  img, video {
-    width: 80%;
-  }
-  .large-img {
-    width: 100%;
-  }
-  .dark {
-    background: $dark-grey;
-    margin-right: 0.5em;
-    margin-left: 0.5em;
-    &:hover {
-      background: $grey;
-    }
-  }
-  #intro {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    .container {
-      padding: 0;
-      h4 {
-        font-weight: 300;
-        font-size: 1.1em;
-      }
-    }
-  }
-
-  #work {
-    color: $dark-grey;
-    h4 {
-      padding-top: 2em;
-      font-size: 1.25em;
-    }
-  }
-  .italics {
-    font-style: italic;
-  }
-  .accent {
-    background: $accent;
-  }
 }
 
+img, video {
+  width: 80%;
+}
 footer {
   background: $dark-grey;
   padding: 2em;
@@ -246,6 +201,43 @@ footer {
   a {
     color: white;
   }
+}
+#intro {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  .container {
+    padding: 0;
+    h4 {
+      font-weight: 300;
+      font-size: 1.1em;
+    }
+  }
+}
+#work {
+  color: $dark-grey;
+  h4 {
+    padding-top: 2em;
+  }
+}
+#profile {
+  width: 60%;
+  border-radius: 50%;
+}
+.log-item {
+  border-bottom: 2px solid $dark-grey;
+  & > h3 {
+    text-decoration: underline;
+    font-size: 1.6em;
+  }
+}
+.large-img {
+  width: 100%;
+}
+.italics {
+  font-style: italic;
+}
+.accent {
+  background: $accent;
 }
 
 #overlay-button {
