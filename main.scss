@@ -16,10 +16,14 @@ body {
   background: $white;
   h1 {
     font-weight: bold;
-    font-size: 1em;
+    font-size: 4em;
+    margin: 0.5em;
+    text-transform: uppercase;
   }
   h2 {
     font-weight: 300;
+    font-size: 2em;
+    margin-bottom: 1.5em;
   }
   h3 {
     font-size: 1.8em;
@@ -124,15 +128,6 @@ nav {
        animation: zoom 20s forwards ease-out infinite;
       }
     }
-  h1 {
-    font-size: 4em;
-    margin: 0.5em;
-    text-transform: uppercase;
-  }
-  h2 {
-    font-size: 2em;
-    margin-bottom: 1.5em;
-  }
 }
 
 main {
@@ -221,11 +216,6 @@ footer {
   h4 {
     padding-top: 2em;
   }
-}
-
-#profile {
-  width: 60%;
-  border-radius: 50%;
 }
 
 .log-item {
@@ -319,6 +309,12 @@ input[type=checkbox]:checked ~ #overlay-button {
 
 @media (max-width: 630px), (max-height: 500px){
   body {
+    h1 {
+      font-size: 2.3em;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
     nav {
       section {
         padding-top: 0.4em;
@@ -352,12 +348,6 @@ input[type=checkbox]:checked ~ #overlay-button {
     #jumbotron {
         padding-top: 20%;
         padding-bottom: 15%;
-        h1 {
-          font-size: 2.3em;
-        }
-        h2 {
-          font-size: 1.5em;
-        }
     }
     main {
       video, img, .small-img {
@@ -369,8 +359,6 @@ input[type=checkbox]:checked ~ #overlay-button {
     }
   }
 }
-
-
 
 @media (max-width: 500px) {
   body {

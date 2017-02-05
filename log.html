@@ -37,7 +37,7 @@
         <section class="accent" id="intro">
             <article class="container">
                 <h4>My discovery log for WebF fully marked up in html and styled with CSS, this log is updated weekly to cover the
-            new knowledge and skills i have gained during the week.</h4>
+            new knowledge and skills I have gained during the week.</h4>
             </article>
         </section>
         <section class="text" id="log">
@@ -318,7 +318,7 @@
                 <h4>Discovery Log Markup</h4>
                 <p>During the transfer and markup of the discovery log to this website I noticed that I would need to show the html code within the log. This is a problem as &lt; and &gt; symbols are automatically interpreted by html as tags even when they
                     are being used to provide code examples. This meant I had to research methods of fixing this issue.</p>
-                <p> During my research I found the <b>&lt;code&gt;</b> element, this represents a section of code, displayed in the monospace font by default. Once i learnt about this element i replaced all html code examples with this element to improve
+                <p> During my research I found the <b>&lt;code&gt;</b> element, this represents a section of code, displayed in the monospace font by default. Once I learnt about this element I replaced all html code examples with this element to improve
                     the presentation of the log and making it easier to understand what text is code.</p>
                 <ul>
                     <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN Code Element</a></li>
@@ -395,18 +395,18 @@
                     <li>Example 1 = <code>a:hover { background: red;}</code></li>
                     <li>Example 2 = <code>.button:hover { padding: 2em;}</code></li>
                 </ul>
-                <p>During my research I also found the :before pseudo class which creates another HTML pseudo element within the main element. This is the element I needed to create the link underline which i will style seperately via :before.</p>
+                <p>During my research I also found the :before pseudo class which creates another HTML pseudo element within the main element. This is the element I needed to create the link underline which I will style seperately via :before.</p>
                 <p>First I implemented the link button hover as it was the most straight forward this involved using the .button class assigned to them and adding the :hover psuedo class to it, with the selctor created I just needed to add the new background
                     colour style within the selector. With this CSS done the button would now changed colour if hovered over.</p>
                 <ul>
                     <li><code>.button:hover { background-color:# ff816f; }</code></li>
                 </ul>
                 <img src="img/buttonGif.gif" class="small-img" alt="Screen recording showing the button hover interaction">
-                <p>I then implemented the navigation link underline using both the :before and :hover pseudo elements. To do this within the CSS i added the <code>nav a:before </code> selector with the following style to create the underline effect:</p>
+                <p>I then implemented the navigation link underline using both the :before and :hover pseudo elements. To do this within the CSS I added the <code>nav a:before </code> selector with the following style to create the underline effect:</p>
                 <ul>
                     <li> content: ""; position: absolute; width: 100%; height: 2px; bottom: -5px; border-bottom: 2px solid #EC644B; transform: scale(0,1); transition: transform 0.2s;</li>
                 </ul>
-                <p>Next I needed to add the hover to the link so that the before element would change style, for this i used <code>nav a:hover:before { transform: scale(1);}</code> which scales the underline from 0 to 1 once hovered over.</p>
+                <p>Next I needed to add the hover to the link so that the before element would change style, for this I used <code>nav a:hover:before { transform: scale(1);}</code> which scales the underline from 0 to 1 once hovered over.</p>
                 <img src="img/underlineGif.gif" class="small-img" alt="Screen recording showing the underline hover interaction">
                 <ul>
                     <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/:hover">MDN :hover pseudo class</a></li>
