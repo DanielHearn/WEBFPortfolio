@@ -29,31 +29,6 @@ body {
   p, code {
     font-size: 1.1em;
   }
-  .button {
-    padding: 1em 2em;
-    background-color: $accent;
-    text-decoration: none;
-    color: white;
-    font-size: 1em;
-    font-weight: 400;
-    transition: background 0.4s;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: inline-block;
-    margin-top: 1em;
-    &:hover {
-      background-color: $accent-light;
-    }
-  }
-  .dark {
-    background: $dark-grey;
-    margin-right: 0.5em;
-    margin-left: 0.5em;
-    &:hover {
-      background: $grey;
-    }
-  }
 }
 
 nav {
@@ -190,9 +165,32 @@ main {
   }
 }
 
-img, video {
-  width: 80%;
+.button {
+  padding: 1em 2em;
+  background-color: $accent;
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  font-weight: 400;
+  transition: background 0.4s;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 1em;
+  &:hover {
+    background-color: $accent-light;
+  }
 }
+.dark {
+  background: $dark-grey;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  &:hover {
+    background: $grey;
+  }
+}
+
 footer {
   background: $dark-grey;
   padding: 2em;
@@ -202,6 +200,7 @@ footer {
     color: white;
   }
 }
+
 #intro {
   padding-top: 2%;
   padding-bottom: 2%;
@@ -213,16 +212,22 @@ footer {
     }
   }
 }
+.accent {
+  background: $accent;
+}
+
 #work {
   color: $dark-grey;
   h4 {
     padding-top: 2em;
   }
 }
+
 #profile {
   width: 60%;
   border-radius: 50%;
 }
+
 .log-item {
   border-bottom: 2px solid $dark-grey;
   & > h3 {
@@ -230,23 +235,22 @@ footer {
     font-size: 1.6em;
   }
 }
+
+img, video {
+  width: 80%;
+}
 .small-img {
   width: 50%;
 }
 .large-img {
   width: 100%;
 }
-.italics {
-  font-style: italic;
-}
-.accent {
-  background: $accent;
-}
 
 #overlay-button {
-  float:right;
-  padding-top: 1.5em;
-  padding-bottom: 1em;
+  padding: 1.5em 0.8em;
+  position: absolute;
+  right: 1em;
+  top: 10px;
   display: none;
   z-index: 5;
   cursor: pointer;

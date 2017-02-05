@@ -15,27 +15,6 @@ body {
     margin-bottom: 1em; }
   body p, body code {
     font-size: 1.1em; }
-  body .button {
-    padding: 1em 2em;
-    background-color: #f97360;
-    text-decoration: none;
-    color: white;
-    font-size: 1em;
-    font-weight: 400;
-    transition: background 0.4s;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: inline-block;
-    margin-top: 1em; }
-    body .button:hover {
-      background-color: #ff8775; }
-  body .dark {
-    background: #22313F;
-    margin-right: 0.5em;
-    margin-left: 0.5em; }
-    body .dark:hover {
-      background: #354452; }
 
 nav {
   background: #22313F;
@@ -150,8 +129,28 @@ main {
   main q {
     font-style: italic; }
 
-img, video {
-  width: 80%; }
+.button {
+  padding: 1em 2em;
+  background-color: #f97360;
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  font-weight: 400;
+  transition: background 0.4s;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 1em; }
+  .button:hover {
+    background-color: #ff8775; }
+
+.dark {
+  background: #22313F;
+  margin-right: 0.5em;
+  margin-left: 0.5em; }
+  .dark:hover {
+    background: #354452; }
 
 footer {
   background: #22313F;
@@ -170,6 +169,9 @@ footer {
       font-weight: 300;
       font-size: 1.1em; }
 
+.accent {
+  background: #f97360; }
+
 #work {
   color: #22313F; }
   #work h4 {
@@ -185,22 +187,20 @@ footer {
     text-decoration: underline;
     font-size: 1.6em; }
 
+img, video {
+  width: 80%; }
+
 .small-img {
   width: 50%; }
 
 .large-img {
   width: 100%; }
 
-.italics {
-  font-style: italic; }
-
-.accent {
-  background: #f97360; }
-
 #overlay-button {
-  float: right;
-  padding-top: 1.5em;
-  padding-bottom: 1em;
+  padding: 1.5em 0.8em;
+  position: absolute;
+  right: 1em;
+  top: 10px;
   display: none;
   z-index: 5;
   cursor: pointer; }
