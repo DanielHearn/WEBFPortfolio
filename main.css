@@ -4,11 +4,15 @@ html {
 body {
   margin: 0;
   background: #fffff9; }
-  body h1, body h2 {
-    font-weight: 300;
+  body h1 {
+    font-weight: bold;
     font-size: 1em; }
+  body h2 {
+    font-weight: 300; }
   body h3 {
-    font-size: 1.8em; }
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0.5em 0; }
   body h4 {
     font-size: 1.2em;
     font-weight: 600;
@@ -114,9 +118,6 @@ main {
     padding: 1em;
     margin: 0 auto;
     font-size: 1em; }
-    main .container h3 {
-      font-weight: bold;
-      margin: 0.5em 0; }
   main .text {
     background: #fffff9;
     color: #0d1319;
@@ -155,8 +156,7 @@ main {
 footer {
   background: #22313F;
   padding: 2em;
-  text-align: center;
-  margin-top: -1px; }
+  text-align: center; }
   footer a {
     color: white; }
 
@@ -284,7 +284,6 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   body main video, body main img, body main .small-img {
     width: 100%; }
   body .button {
-    font-size: 1em;
     padding: 0.8em 1.2em; } }
 
 @media (max-width: 500px) {
