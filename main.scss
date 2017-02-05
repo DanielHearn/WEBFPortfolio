@@ -1,8 +1,8 @@
 $accent: #f97360;
-$accent-light: #ff816f;
+$accent-light: #ff8775;
 $dark-grey: #22313F;
 $darker-grey: #0d1319;
-$grey: #293846;
+$grey: #354452;
 $white: #fffff9;
 $litreview: #86d07d;
 $log: #3c6188;
@@ -230,6 +230,9 @@ footer {
     font-size: 1.6em;
   }
 }
+.small-img {
+  width: 50%;
+}
 .large-img {
   width: 100%;
 }
@@ -353,7 +356,7 @@ input[type=checkbox]:checked ~ #overlay-button {
         }
     }
     main {
-      video, img {
+      video, img, .small-img {
         width: 100%;
       }
     }

@@ -31,7 +31,7 @@
             <div id="background-image"></div>
         </div>
         <h1>Discovery Log</h1>
-        <h2>Last updated - 11/12/16</h2>
+        <h2>Last updated - 5/2/17</h2>
     </section>
     <main>
         <section class="accent" id="intro">
@@ -123,6 +123,19 @@
                 <h4>Markup Introduction</h4>
                 <p>HTML - HyperText Markup Language</p>
                 <p>CSS - Cascading Style Sheets</p>
+                <p>Basic HTML elements:</p>
+                <ul>
+                    <li><b>&lt;!doctype html&gt;</b> = Specifies that the document is HTML document, the doctype also specifies that this is HTML5 document.</li>
+                    <li><b>&lt;p&gt;</b> = A paragraph of Text.</li>
+                    <li><b>&lt;h1&gt;</b> = A text heading, these start at h1 going down to h6, the h1 represents the highest level and most important heading within the page.</li>
+                    <li><b>&lt;head&gt;</b> = A section that provides metadata about the page such as title, links (CSS, scripts).</li>
+                    <li><b>&lt;title&gt;</b> = Defines page title which is shown on the browser tab, this title should be short and define exactly what the page is about.</li>
+                    <li><b>&lt;link&gt;</b> = Creates a link with an external resource such as style sheets and favicons.</li>
+                    <li><b>&lt;a&gt;</b> = Creates a hyperlink to another page via a URL, which can be absolute or relative for links within the current website.</li>
+                    <li><b>&lt;ul&gt;</b> = Creates an unordered list of items, with the default showing bullet points for each list item within.</li>
+                    <li><b>&lt;ol&gt;</b> = Creates an ordered list of items, with the default showing ascending numbers for each list item.</li>
+                    <li><b>&lt;li&gt;</b> = Creates a list item which should be placed within a ul or ol element, list content should be placed within the li tags.</li>
+                </ul>
                 <p>Useful resources:</p>
                 <ul>
                     <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Mozilla HTML Guide</a></li>
@@ -173,19 +186,23 @@
                 <p>HTTP: Defines how messages are formatted and transmitted and how browsers and servers respond to these commands. Entering a HTTP url means you are sending a HTTP GET request</p>
                 <p>Fragments: Loads page and looks for element with passed fragment, e.g index.html#cake</p>
                 <ul>
-                    <li><code>&lt;a href="/index.html#about"&gt;About section link&lt;/a&gt;</code></li>
+                    <li><code>&lt;a href="index.html#about"&gt;About section link&lt;/a&gt;</code></li>
+                    <li><a href="index.html#about">About section link</a></li>
                 </ul>
                 <p>Absolute URL’s: Link directly to the html page</p>
                 <ul>
-                    <li><code>&lt;a href="http/port.ac.uk"&gt;Portsmouth Uni Link&lt;/a&gt;</code></li>
+                    <li><code>&lt;a href="http://port.ac.uk"&gt;Portsmouth Uni Link&lt;/a&gt;</code></li>
+                    <li><a href="http://port.ac.uk">Portsmouth Uni Link</a></li>
                 </ul>
                 <p>Relative URL’s: Links to the html page relative current page</p>
                 <ul>
                     <li><code>&lt;a href="/otherwork.html"&gt;Other Work Link&lt;/a&gt;</code></li>
+                    <li><a href="otherwork.html">Other Work Link</a></li>
                 </ul>
                 <p>Target attribute: Target ="_blank", open link in new window</p>
                 <ul>
                     <li><code>&lt;a target ="_blank" href="/otherwork.html"&gt;Other Work Link&lt;/a&gt;</code></li>
+                    <li><a target="_blank" href="otherwork.html">Other Work Link</a></li>
                 </ul>
             </article>
             <article class="container log-item">
@@ -196,11 +213,24 @@
                     <li>href = Image source, can be absolute or relative</li>
                     <li>alt = Alternative text, always use</li>
                     <li>title = Tooltip on mouseover</li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">MDN Img Element</a></li>
                 </ul>
                 <p><b>&lt;figure&gt;</b> = Specify self-contained content, such as images.</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure">MDN Figure Element</a></li>
+                </ul>
                 <p><b>&lt;figcaption&gt;</b> = Caption associated with figure, such as a description of the figure content.</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption">MDN Figcaption Element</a></li>
+                </ul>
                 <p><b>&lt;picture&gt;</b> = Specifies container for multiple source elements.</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">MDN Picture Element</a></li>
+                </ul>
                 <p><b>&lt;source&gt;</b> = Specifies media element for use with picture, audio and video elements.</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">MDN Source Element</a></li>
+                </ul>
                 <p>Solution for specifying multiple image sources based on screen width.</p>
                 <ul>
                     <code>
@@ -246,6 +276,7 @@
             <article class="container log-item">
                 <h3>8/12/16</h3>
                 <h4>Semantic Elements</h4>
+                <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element">MDN HTML Elements</a>
                 <p>Structural Elements</p>
                 <ul>
                     <li><b>&lt;article&gt;</b> = Represents self-contained content that is independently distributable, e.g forum posts, blog entries, discovery log entries.</li>
@@ -254,6 +285,7 @@
                     <li><b>&lt;footer&gt;</b> = Represents the footer of the page or element, this could contain content that is helpful but extremely import such as copyright or related links.</li>
                     <li><b>&lt;header&gt;</b> = Represents content that is introductory or navigation in nature, such as navigation bars, search bars, logos, titles.</li>
                     <li><b>&lt;aside&gt;</b> = Represents content that is related to the pages main content but is displayed seperately, potentially as a siderbar.</li>
+                    <li><b>&lt;nav&gt;</b> = Represents section of the page that provides navigation features such as a navigation bar or search bar.</li>
                 </ul>
                 <p>Presentation Elements</p>
                 <ul>
@@ -278,6 +310,24 @@
                         <li><u>This is how the u element renders</u></li>
                     </ul>
                 </ul>
+                <h4>Discovery Log Markup</h4>
+                <p>During the transfer and markup of the discovery log to this website I noticed that I would need to show the html code within the log. This is a problem as &lt; and &gt; symbols are automatically interpreted by html as tags even when they
+                    are being used to provide code examples. This meant I had to research methods of fixing this issue.</p>
+                <p> During my research I found the <b>&lt;code&gt;</b> element, this represents a section of code, displayed in the monospace font by default. Once i learnt about this element i replaced all html code examples with this element to improve
+                    the presentation of the log and making it easier to understand what text is code.</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN Code Element</a></li>
+                </ul>
+                <p>Next I needed to research how to place &lt; and &gt; symbols without them being interpreted as html tags. Based on my research I found out about html character references, this allows the placement of text symbols including less than and
+                    greather than symbols.</p>
+                <p>Symbols include:</p>
+                <ul>
+                    <li><b>Greater than = </b>&<code>gt;</code></li>
+                    <li><b>Less than = </b>&<code>lt;</code></li>
+                </ul>
+                <ul>
+                    <li><a href="https://dev.w3.org/html5/html-author/charref">W3 HTML Character References</a></li>
+                </ul>
             </article>
             <article class="container log-item">
                 <h3>8/1/17</h3>
@@ -285,45 +335,91 @@
                 <p>Aria-label</p>
                 <ul>
                     <li>The aria-label attribute is used to aid site accessibility as the attribute contains a string that labels the element.</li>
-                    <li>This should be used on elements that have no text being displayed that describe the object such as buttons that use icons.</li>
+                    <li>This should be used on elements that have no text being displayed such as buttons that only use icons.</li>
                     <li><code>&lt;button aria-label="Close"&gt;X&lt;/button&gt;</code></li>
                     <li><i>For this website the aria label has been used to label the menu button to ensure accessibility.</i></li>
-                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">Mozilla Aria-label Guide</a></li>
+                </ul>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">MDN Aria-label Guide</a></li>
                 </ul>
                 <p>HTML5 Video captions</p>
                 <ul>
                     <li>To ensure site accessibility all videos within the site should have captions which describe what is happening or being said within the video.</li>
                     <li>To implement this the <b>&lt;track&gt;</b> element should be placed inside the video element along with the source elements.</li>
                     <ul>
-                      <li><code>&lt;track label="English" kind="subtitles" srclang="en" src="captions.vtt" default&gt; </code></li>
+                        <li><code>&lt;track label="English" kind="subtitles" srclang="en" src="captions.vtt" default&gt; </code></li>
                     </ul>
                     <li>A captions file also needs to be linked as a source within this track element, this requires a specific format and the caption text within.</li>
                     <ul>
                         <li><code>WEBVTT 00:01.000 --&gt; 00:04.000 Captions between the first second to the fourth.</code></li>
                     </ul>
-                    <li><a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Mozilla Video Subtitle Guide</a></li>
+                </ul>
+                <ul>
+                  <li><a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">MDN Video Subtitle Guide</a></li>
+                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">MDN Track Element</a></li>
                 </ul>
             </article>
             <article class="container log-item">
                 <h3>15/1/17</h3>
                 <h4>Media queries</h4>
-                <p>Media queries</p>
+                <p>Media queries are used modify CSS based on specified parameters such as the height or width. This allows the page to change styling when the website is loaded using a mobile device or small screen/window.</p>
+                <p>There are two methods of implementing these queries, the first involves using a html link element linked to a stylesheet with a media attribute that will use that stlesheet if the media parameter is met. The other method is directly entered
+                    within a style sheet and involves using a <code>@media</code> selector with the media parameter in brackets within the sheet.</p>
                 <ul>
-                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">Mozilla Aria Label Guide</a></li>
+                    <li>Method 1 = <code>&lt;link rel="stylesheet" media="(max-width: 800px)" href="example.css" /&gt;</code></li>
+                    <li>Method 2 = <code>@media (max-width: 600px) {.facet_sidebar {display: none;}}</code></li>
+                </ul>
+                <p>Within this site I then used these queries to change styles depending on screen width and height, the different styles included changing padding, margins, font sizes and the navigation menu.</p>
+                <p>Below is an example of a media query within this website which sets the padding-top to 10% if the screen is under 500 pixels wide such as on phones.</p>
+                <ul>
+                    <li><code>@media (max-width: 500px) { body { padding-top: 10%; } }</code></li>
+                </ul>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries">MDN Media Queries</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">MDN Using Media Queries</a></li>
                 </ul>
             </article>
             <article class="container log-item">
                 <h3>22/1/17</h3>
                 <h4>HTML Interactivity</h4>
-                <p>Nav menu underline animation</p>
+                <p>To make the website more interactive and aesthetically pleasing I needed to add interactivity to the navigation menu items and the link buttons. For the navigation items I wanted a underline animation below each link when the user's mouse
+                    hovers over the link, which helps indicate to the user that it is a link. For the link buttons I only wanted the button background colour to change once the user hovers the button. </p>
+                <p>To implement these features I researched the available HTML and CSS elements I would need. From this research I found the CSS :hover pseudo class which causes a CSS style to appear if the styled element is hovered over which is what I
+                    needed to create both interactions.</p>
                 <ul>
-                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">Mozilla Aria Label Guide</a></li>
+                    <li>Example 1 = <code>a:hover { background: red;}</code></li>
+                    <li>Example 2 = <code>.button:hover { padding: 2em;}</code></li>
+                </ul>
+                <p>During my research I also found the :before pseudo class which creates another HTML pseudo element within the main element. This is the element I needed to create the link underline which i will style seperately via :before.</p>
+                <p>First I implemented the link button hover as it was the most straight forward this involved using the .button class assigned to them and adding the :hover psuedo class to it, with the selctor created I just needed to add the new background
+                    colour style within the selector. With this CSS done the button would now changed colour if hovered over.</p>
+                <ul>
+                    <li><code>.button:hover { background-color:# ff816f; }</code></li>
+                </ul>
+                <img src="img/buttonGif.gif" class="small-img" alt="Screen recording showing the button hover interaction">
+                <p>I then implemented the navigation link underline using both the :before and :hover pseudo elements. To do this within the CSS i added the <code>nav a:before </code> selector with the following style to create the underline effect:</p>
+                <ul>
+                    <li> content: ""; position: absolute; width: 100%; height: 2px; bottom: -5px; border-bottom: 2px solid #EC644B; transform: scale(0,1); transition: transform 0.2s;</li>
+                </ul>
+                <p>Next I needed to add the hover to the link so that the before element would change style, for this i used <code>nav a:hover:before { transform: scale(1);}</code> which scales the underline from 0 to 1 once hovered over.</p>
+                <img src="img/underlineGif.gif" class="small-img" alt="Screen recording showing the underline hover interaction">
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/:hover">MDN :hover pseudo class</a></li>
+                    <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/::before">MDN :before pseudo class</a></li>
                 </ul>
             </article>
             <article class="container log-item">
                 <h3>29/1/17</h3>
                 <h4>Checkbox hack for mobile menu</h4>
                 <p>Label, css for input</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">Mozilla Aria Label Guide</a></li>
+                </ul>
+            </article>
+            <article class="container log-item">
+                <h3>5/2/17</h3>
+                <h4>HTML THING</h4>
+                <p>HTML THING</p>
                 <ul>
                     <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">Mozilla Aria Label Guide</a></li>
                 </ul>

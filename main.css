@@ -29,13 +29,13 @@ body {
     display: inline-block;
     margin-top: 1em; }
     body .button:hover {
-      background-color: #ff816f; }
+      background-color: #ff8775; }
   body .dark {
     background: #22313F;
     margin-right: 0.5em;
     margin-left: 0.5em; }
     body .dark:hover {
-      background: #293846; }
+      background: #354452; }
 
 nav {
   background: #22313F;
@@ -185,6 +185,9 @@ footer {
     text-decoration: underline;
     font-size: 1.6em; }
 
+.small-img {
+  width: 50%; }
+
 .large-img {
   width: 100%; }
 
@@ -278,7 +281,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
       font-size: 2.3em; }
     body #jumbotron h2 {
       font-size: 1.5em; }
-  body main video, body main img {
+  body main video, body main img, body main .small-img {
     width: 100%; }
   body .button {
     font-size: 1em;
