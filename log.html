@@ -35,10 +35,10 @@
     </section>
     <main>
         <section class="accent" id="intro">
-            <article class="container">
+            <div class="container">
                 <h4>My discovery log for WebF fully marked up in html and styled with CSS, this log is updated weekly to cover the
             new knowledge and skills I have gained during the week.</h4>
-            </article>
+            </div>
         </section>
         <section class="text" id="log">
             <article class="container log-item">
@@ -233,12 +233,10 @@
                 </ul>
                 <p>Solution for specifying multiple image sources based on screen width.</p>
                 <ul>
-                    <code>
-                        <li>&lt;picture&gt;</li>
-                        <li>&lt;source media="(min-width: 700px)" srcset="img/abstractIso1.png"&gt;</li>
-                        <li>&lt;source media="(min-width: 600px)" srcset="img/abstractIso2.png"&gt;</li>
-                        <li>&lt;/picture&gt;</li>
-                    </code>
+                    <li><code>&lt;picture&gt;</code></li>
+                    <li><code>&lt;source media="(min-width: 700px)" srcset="img/abstractIso1.png"&gt;</code></li>
+                    <li><code>&lt;source media="(min-width: 600px)" srcset="img/abstractIso2.png"&gt;</code></li>
+                    <li><code>&lt;/picture&gt;</code></li>
                 </ul>
                 <picture>
                     <source media="(min-width: 800px)" srcset="img/abstractIso1.png">
@@ -247,12 +245,10 @@
                 </picture>
                 <p>Solution for video with autoplay, source, as well as alternative if video fails to load.</p>
                 <ul>
-                    <code>
-                          <li>&lt;video autoplay&gt;</li>
-                          <li>&lt;source&gt; src="i/testcard.webm" type='video/webm; codecs="vp8, vorbis"&gt;&lt;/source&gt;</li>
-                          <li>&lt;p&gt;Sorry, your browser doesn't do video.&lt;/p&gt;</li>
-                          <li>&lt;/video&gt;</li>
-                    </code>
+                    <li><code>&lt;video autoplay&gt;</code></li>
+                    <li><code>&lt;source&gt; src="i/testcard.webm" type='video/webm; codecs="vp8, vorbis"&gt;&lt;/source&gt;</code></li>
+                    <li><code>&lt;p&gt;Sorry, your browser doesn't do video.&lt;/p&gt;</code></li>
+                    <li><code>&lt;/video&gt;</code></li>
                 </ul>
                 <p>The video below demonstrates this solution with additional features from more recent research including subtitles.</p>
                 <video aria-label="Video showing view outside my window" controls muted preload="metadata">
@@ -264,13 +260,15 @@
                 <p>Additional css properties learnt:</p>
                 <ul>
                     <li><b>Sizes</b></li>
-                    <ul>
-                        <li>percent = %</li>
-                        <li>pixels (not recommended to use) = px</li>
-                        <li>em (relative to font-size) = em</li>
-                        <li>viewport width = vw</li>
-                        <li>viewport height = vh</li>
-                    </ul>
+                    <li>
+                        <ul>
+                            <li>percent = %</li>
+                            <li>pixels (not recommended to use) = px</li>
+                            <li>em (relative to font-size) = em</li>
+                            <li>viewport width = vw</li>
+                            <li>viewport height = vh</li>
+                        </ul>
+                    </li>
                     <li><b>opacity (0 to 1)</b> = Change opacity 0 to 1</li>
                     <li><b>visibility (hidden, visible)</b> = Change visibility</li>
                     <li><b>display (none, block, inline, inline-block)</b> = Change display mode</li>
@@ -295,25 +293,35 @@
                 <p>Presentation Elements</p>
                 <ul>
                     <li><b>&lt;i&gt;</b> = Represents text that is distinct to the main text, displayed in italics as default.</li>
-                    <ul>
-                        <li><i>This is how the i element renders</i></li>
-                    </ul>
+                    <li>
+                        <ul>
+                            <li><i>This is how the i element renders</i></li>
+                        </ul>
+                    </li>
                     <li><b>&lt;em&gt;</b> = Represents text that is emphasised, displayed in bold text as default.</li>
-                    <ul>
-                        <li><em>This is how the em element renders</em></li>
-                    </ul>
+                    <li>
+                        <ul>
+                            <li><em>This is how the em element renders</em></li>
+                        </ul>
+                    </li>
                     <li><b>&lt;b&gt;</b> = Represents text that is distinct to the main text, but without additional importance such as keywords, displayed in bold text as default.</li>
-                    <ul>
-                        <li><b>This is how the b element renders</b></li>
-                    </ul>
+                    <li>
+                        <ul>
+                            <li><b>This is how the b element renders</b></li>
+                        </ul>
+                    </li>
                     <li><b>&lt;strong&gt;</b> = Represents text that is distinct from main text due to strong importance, displayed in bold text as default.</li>
-                    <ul>
-                        <li><strong>This is how the strong element renders</strong></li>
-                    </ul>
+                    <li>
+                        <ul>
+                            <li><strong>This is how the strong element renders</strong></li>
+                        </ul>
+                    </li>
                     <li><b>&lt;u&gt;</b> = Represents text that is distinct from main text and displayed with an underline.</li>
-                    <ul>
-                        <li><u>This is how the u element renders</u></li>
-                    </ul>
+                    <li>
+                        <ul>
+                            <li><u>This is how the u element renders</u></li>
+                        </ul>
+                    </li>
                 </ul>
                 <h4>Discovery Log Markup</h4>
                 <p>During the transfer and markup of the discovery log to this website I noticed that I would need to show the html code within the log. This is a problem as &lt; and &gt; symbols are automatically interpreted by html as tags even when they
@@ -351,13 +359,17 @@
                 <ul>
                     <li>To ensure site accessibility all videos within the site should have captions which describe what is happening or being said within the video.</li>
                     <li>To implement this the <b>&lt;track&gt;</b> element should be placed inside the video element along with the source elements.</li>
-                    <ul>
-                        <li><code>&lt;track label="English" kind="subtitles" srclang="en" src="captions.vtt" default&gt; </code></li>
-                    </ul>
+                    <li>
+                        <ul>
+                            <li><code>&lt;track label="English" kind="subtitles" srclang="en" src="captions.vtt" default&gt; </code></li>
+                        </ul>
+                    </li>
                     <li>A captions file also needs to be linked as a source within this track element, this requires a specific format and the caption text within.</li>
-                    <ul>
-                        <li><code>WEBVTT 00:01.000 --&gt; 00:04.000 Captions between the first second to the fourth.</code></li>
-                    </ul>
+                    <li>
+                        <ul>
+                            <li><code>WEBVTT 00:01.000 --&gt; 00:04.000 Captions between the first second to the fourth.</code></li>
+                        </ul>
+                    </li>
                 </ul>
                 <ul>
                     <li><a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">MDN Video Subtitle Guide</a></li>
@@ -415,10 +427,11 @@
             </article>
             <article class="container log-item">
                 <h3>29/1/17</h3>
-                <h4>Checkbox hack for mobile menu</h4>
-                <p>Label, css for input</p>
+                <h4>Checkbox toggle for mobile menu</h4>
+                <p>To implement a mobile menu into the website i decided </p>
                 <ul>
-                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">Mozilla Aria Label Guide</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">MDN Label Element</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">MDN Input Element</a></li>
                 </ul>
             </article>
             <article class="container log-item">
