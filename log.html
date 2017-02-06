@@ -428,10 +428,28 @@
             <article class="container log-item">
                 <h3>29/1/17</h3>
                 <h4>Checkbox toggle for mobile menu</h4>
-                <p>To implement a mobile menu into the website i decided </p>
+                <p>To implement a mobile menu into the website i decided to use a HTML and CSS only solution via the <code>&lt;input&gt;, &lt;label&gt;</code> elements, these allow for a toggle menu that i will use to make the navigation bar open and close. </p>
+                <p>The menu first uses the <code>&lt;input&gt;</code> element handle whether that holds a checkbox true or false values which i can use to toggle the navigation menu visibility. This element is meant to create interactive controls that recieve input from the user and can have many different types such as button, checkbox, date, and file. </p>
+                <p>Once i added the <code>&lt;input&gt;</code> element to the page i needed use the <code>&lt;label&gt;</code> element in combination with the input as the input element has limited styling possibilities. Due to this i added a <code>&lt;label&gt;</code> that takes the users input for the input, this will allow me to use CSS to fully style the label instead of the input element. I acheived this by placing an ID to the input and using this ID name within the label's for attribute, this causes any interactions on the label to affect the input. The HTMl for both of these elements is shown below.</p>
+                <ul>
+                  <li><code>&lt;input type="checkbox" id="overlay-input" /&gt; </code></li>
+                  <li><code>&lt;label aria-label="Menu toggle" for="overlay-input"&gt;</code></li>
+                </ul>
+                <p>With both of these elements implemented to all pages I needed to handle what happens when the toggle button is clicked. Based on my research I found that I needed to use the CSS <code>:checked</code> pseudo element that will activate a style if the button is clicked.</p>
+                <p>As i had already styled the mobile menu by altering the CSS of the standard navigation menu which is a unordered list located with the same HTML parent element allowing me to use CSS general sibling selector to change the menu's style once the button is clicked. The full selector used to handle the menu toggle is shown below.</p>
+                <ul>
+                  <li><code>input[type=checkbox]:checked ~ ul {</code></li>
+                </ul>
+                <p>With both the HTML and CSS implemented for this menu I further researched and applied CSS transformations to the menu toggle which indicate to the user whether the menu can be opened or close. For this I used the CSS transform and opacity properties why transform the traditional hamburger menu to a X close once the menu is opened, these also use the :before and :after selectors..</p>
+                <ul>
+                  <li><code>&:before { transform: rotate(45deg) translate(7px, 7px); opacity: 1; }</code></li>
+                  <li><code>&:after { transform: rotate(-45deg) translate(7px, -7px);</code></li>
+                </ul>
+                <img src="img/menuGif.gif" class="small-img" alt="Screen recording showing the mobile menu interaction">
                 <ul>
                     <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">MDN Label Element</a></li>
                     <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">MDN Input Element</a></li>
+                    <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/General_sibling_selectors">MDN Sibling Selector</a></li>
                 </ul>
             </article>
             <article class="container log-item">
