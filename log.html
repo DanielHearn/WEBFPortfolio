@@ -425,22 +425,28 @@
             <article class="container log-item">
                 <h3>29/1/17</h3>
                 <h4>Checkbox toggle for mobile menu</h4>
-                <p>To implement a mobile menu into the website i decided to use a HTML and CSS only solution via the <code>&lt;input&gt;, &lt;label&gt;</code> elements, these allow for a toggle menu that i will use to make the navigation bar open and close. </p>
-                <p>The menu first uses the <code>&lt;input&gt;</code> element handle whether that holds a checkbox true or false values which i can use to toggle the navigation menu visibility. This element is meant to create interactive controls that recieve input from the user and can have many different types such as button, checkbox, date, and file. </p>
-                <p>Once i added the <code>&lt;input&gt;</code> element to the page i needed use the <code>&lt;label&gt;</code> element in combination with the input as the input element has limited styling possibilities. Due to this i added a <code>&lt;label&gt;</code> that takes the users input for the input, this will allow me to use CSS to fully style the label instead of the input element. I acheived this by placing an ID to the input and using this ID name within the label's for attribute, this causes any interactions on the label to affect the input. The HTMl for both of these elements is shown below.</p>
+                <p>To implement a mobile menu into the website i decided to use a HTML and CSS only solution via the <code>&lt;input&gt;, &lt;label&gt;</code> elements, these allow for a toggle menu that i will use to make the navigation bar open and close.
+                    </p>
+                <p>The menu first uses the <code>&lt;input&gt;</code> element handle whether that holds a checkbox true or false values which i can use to toggle the navigation menu visibility. This element is meant to create interactive controls that recieve
+                    input from the user and can have many different types such as button, checkbox, date, and file. </p>
+                <p>Once i added the <code>&lt;input&gt;</code> element to the page i needed use the <code>&lt;label&gt;</code> element in combination with the input as the input element has limited styling possibilities. Due to this i added a <code>&lt;label&gt;</code>                    that takes the users input for the input, this will allow me to use CSS to fully style the label instead of the input element. I acheived this by placing an ID to the input and using this ID name within the label's for attribute, this
+                    causes any interactions on the label to affect the input. The HTMl for both of these elements is shown below.</p>
                 <ul>
-                  <li><code>&lt;input type="checkbox" id="overlay-input" /&gt; </code></li>
-                  <li><code>&lt;label aria-label="Menu toggle" for="overlay-input"&gt;</code></li>
+                    <li><code>&lt;input type="checkbox" id="overlay-input" /&gt; </code></li>
+                    <li><code>&lt;label aria-label="Menu toggle" for="overlay-input"&gt;</code></li>
                 </ul>
-                <p>With both of these elements implemented to all pages I needed to handle what happens when the toggle button is clicked. Based on my research I found that I needed to use the CSS <code>:checked</code> pseudo element that will activate a style if the button is clicked.</p>
-                <p>As i had already styled the mobile menu by altering the CSS of the standard navigation menu which is a unordered list located with the same HTML parent element allowing me to use CSS general sibling selector to change the menu's style once the button is clicked. The full selector used to handle the menu toggle is shown below.</p>
+                <p>With both of these elements implemented to all pages I needed to handle what happens when the toggle button is clicked. Based on my research I found that I needed to use the CSS <code>:checked</code> pseudo element that will activate a
+                    style if the button is clicked.</p>
+                <p>As i had already styled the mobile menu by altering the CSS of the standard navigation menu which is a unordered list located with the same HTML parent element allowing me to use CSS general sibling selector to change the menu's style
+                    once the button is clicked. The full selector used to handle the menu toggle is shown below.</p>
                 <ul>
-                  <li><code>input[type=checkbox]:checked ~ ul {</code></li>
+                    <li><code>input[type=checkbox]:checked ~ ul {</code></li>
                 </ul>
-                <p>With both the HTML and CSS implemented for this menu I further researched and applied CSS transformations to the menu toggle which indicate to the user whether the menu can be opened or close. For this I used the CSS transform and opacity properties why transform the traditional hamburger menu to a X close once the menu is opened, these also use the :before and :after selectors..</p>
+                <p>With both the HTML and CSS implemented for this menu I further researched and applied CSS transformations to the menu toggle which indicate to the user whether the menu can be opened or close. For this I used the CSS transform and opacity
+                    properties why transform the traditional hamburger menu to a X close once the menu is opened, these also use the :before and :after selectors..</p>
                 <ul>
-                  <li><code>&:before { transform: rotate(45deg) translate(7px, 7px); opacity: 1; }</code></li>
-                  <li><code>&:after { transform: rotate(-45deg) translate(7px, -7px);</code></li>
+                    <li><code>&:before { transform: rotate(45deg) translate(7px, 7px); opacity: 1; }</code></li>
+                    <li><code>&:after { transform: rotate(-45deg) translate(7px, -7px);</code></li>
                 </ul>
                 <img src="img/menuGif.gif" class="small-img" alt="Screen recording showing the mobile menu interaction">
                 <ul>
@@ -451,10 +457,36 @@
             </article>
             <article class="container log-item">
                 <h3>5/2/17</h3>
-                <h4>HTML THING</h4>
-                <p>HTML THING</p>
+                <h4>HTML Validation</h4>
+                <p>To ensure that the website has been coded correctly i used W3's HTML validator which identifies errors within the HTML where its usage doesn't match W3's HTML specification.</p>
+                <p>After using the validator it found various errors and warnings on the HTML being used in this log page but with no errors on the other pages. Due to these errors I researched the correct usage for these elements based on the errors, which
+                    identified incorrect usage of the ul, li and code elements.</p>
+                <p>The first issue identified by the validator was incorrect nesting of ul elements at one of the earlier log entries as I had directly added ul as a child of ul which both the validator and W3 specification state not to do as the only child
+                    of a ul element are li. Once I fixed this by moving all nested lists inside new li elements I needed to fix a similar issue with the code element where i had place them as a direct child of a ul, which again is invalid html and was
+                    easily fixed by placing them within li elements.</p>
+                <p>Researching the HTML specification to fix these issues made me realise how important researching and understanding the correct HTML standards as many can potentially go unnoticed.</p>
                 <ul>
-                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">Mozilla Aria Label Guide</a></li>
+                    <li><a href="https://validator.w3.org">W3 HTML Validator</a></li>
+                    <li><a href="https://www.w3.org/TR/html5/">W3 HTML5 Specification</a></li>
+                    <li><a href="https://www.w3.org/TR/html5/grouping-content.html#the-li-element">W3 ul element</a></li>
+                    <li><a href="https://www.w3.org/TR/html5/grouping-content.html#the-li-element">W3 li element</a></li>
+                    <li><a href="https://www.w3.org/TR/html5/text-level-semantics.html#the-code-element">W3 code element</a></li>
+                </ul>
+            </article>
+            <article class="container log-item">
+                <h3>12/2/17</h3>
+                <h4>Meep</h4>
+                <p>Mep</p>
+                <ul>
+                    <li><a href="https://validator.w3.org">W3 HTML Validator</a></li>
+                </ul>
+            </article>
+            <article class="container log-item">
+                <h3>17/2/17</h3>
+                <h4>Meep</h4>
+                <p>Mep</p>
+                <ul>
+                    <li><a href="https://validator.w3.org">W3 HTML Validator</a></li>
                 </ul>
             </article>
         </section>
