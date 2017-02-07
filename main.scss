@@ -111,23 +111,9 @@ nav {
   font-weight: 300;
   margin: 0 auto;
   text-align: center;
-  #background {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    z-index: -1;
-    #background-image {
-       background: $dark-grey;
-       background-image: url("img/background.jpg");
-       background-size: cover;
-       width: 100%;
-       height: 100%;
-      // animation: zoom 20s forwards ease-out infinite;
-      }
-    }
+  background: $dark-grey;
+  background-image: url("img/background.jpg");
+  background-size: cover;
 }
 
 main {
@@ -240,7 +226,7 @@ img, video {
   padding: 1.5em 0.8em;
   position: absolute;
   right: 1em;
-  top: 10px;
+  top: 8px;
   display: none;
   z-index: 5;
   cursor: pointer;
@@ -307,7 +293,7 @@ input[type=checkbox]:checked ~ #overlay-button {
   }
 }
 
-@media (max-width: 630px), (max-height: 500px){
+@media (max-width: 630px), (max-height: 400px){
   body {
     h1 {
       font-size: 2.3em;
