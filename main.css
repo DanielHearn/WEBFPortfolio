@@ -23,6 +23,10 @@ body {
     margin-bottom: 1em; }
   body p, body code {
     font-size: 1.1em; }
+  body img, body video {
+    width: 80%; }
+  body q {
+    font-style: italic; }
 
 nav {
   background: #22313F;
@@ -112,8 +116,6 @@ main {
     text-align: left; }
     main .text p {
       font-size: 1em; }
-  main q {
-    font-style: italic; }
 
 .button {
   padding: 1em 2em;
@@ -122,13 +124,13 @@ main {
   color: white;
   font-size: 1em;
   font-weight: 400;
-  transition: background 0.4s;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: inline-block;
   margin-top: 1em; }
   .button:hover {
+    transition: background 0.4s;
     background-color: #ff8775; }
 
 .dark {
@@ -158,7 +160,7 @@ footer {
   background: #f97360; }
 
 #work {
-  color: #22313F; }
+  color: #0d1319; }
   #work h4 {
     padding-top: 2em; }
 
@@ -167,9 +169,6 @@ footer {
   .log-item > h3 {
     text-decoration: underline;
     font-size: 1.6em; }
-
-img, video {
-  width: 80%; }
 
 .small-img {
   width: 50%; }
@@ -217,14 +216,6 @@ input[type=checkbox]:checked ~ #overlay-button span:before {
 
 input[type=checkbox]:checked ~ #overlay-button span:after {
   transform: rotate(-45deg) translate(7px, -7px); }
-
-@keyframes zoom {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(1.05); }
-  100% {
-    transform: scale(1); } }
 
 @media (min-width: 500px) and (min-height: 500px) {
   body nav #overlay-button {

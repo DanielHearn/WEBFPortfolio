@@ -38,6 +38,12 @@ body {
   p, code {
     font-size: 1.1em;
   }
+  img, video {
+    width: 80%;
+  }
+  q {
+    font-style: italic;
+  }
 }
 
 nav {
@@ -142,9 +148,6 @@ main {
       font-size: 1em;
     }
   }
-  q {
-    font-style: italic;
-  }
 }
 
 .button {
@@ -154,13 +157,13 @@ main {
   color: white;
   font-size: 1em;
   font-weight: 400;
-  transition: background 0.4s;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: inline-block;
   margin-top: 1em;
   &:hover {
+    transition: background 0.4s;
     background-color: $accent-light;
   }
 }
@@ -193,12 +196,13 @@ footer {
     }
   }
 }
+
 .accent {
   background: $accent;
 }
 
 #work {
-  color: $dark-grey;
+  color: $darker-grey;
   h4 {
     padding-top: 2em;
   }
@@ -212,9 +216,6 @@ footer {
   }
 }
 
-img, video {
-  width: 80%;
-}
 .small-img {
   width: 50%;
 }
@@ -272,12 +273,6 @@ input[type=checkbox]:checked ~ #overlay-button {
       transform: rotate(-45deg) translate(7px, -7px);
     }
   }
-}
-
-@keyframes zoom {
-  0% {transform: scale(1);}
-  50% {transform: scale(1.05);}
-  100% {transform: scale(1);}
 }
 
 @media (min-width: 500px) and (min-height: 500px){
