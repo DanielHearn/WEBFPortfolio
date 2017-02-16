@@ -28,7 +28,7 @@
     </header>
     <section id="jumbotron">
         <h1>Discovery Log</h1>
-        <h2>Last updated - 5/2/17</h2>
+        <h2>Last updated - 16/2/17</h2>
     </section>
     <main>
         <section class="accent" id="intro">
@@ -249,7 +249,7 @@
                 <p>Additional css properties learnt:</p>
                 <ul>
                     <li><strong>Sizes</strong></li>
-                    <li>
+                    <li class="list-noStyle">
                         <ul>
                             <li>percent = %</li>
                             <li>pixels (not recommended to use) = px</li>
@@ -290,31 +290,31 @@
                 <p>Presentation Elements</p>
                 <ul>
                     <li><strong>&lt;i&gt;</strong> = Represents text that is distinct to the main text, displayed in italics as default.</li>
-                    <li>
+                    <li class="list-noStyle">
                         <ul>
                             <li><i>This is how the i element renders</i></li>
                         </ul>
                     </li>
                     <li><strong>&lt;em&gt;</strong> = Represents text that is emphasised, displayed in bold text as default.</li>
-                    <li>
+                    <li class="list-noStyle">
                         <ul>
                             <li><em>This is how the em element renders</em></li>
                         </ul>
                     </li>
                     <li><strong>&lt;strong&gt;</strong> = Represents text that is distinct to the main text, but without additional importance such as keywords, displayed in bold text as default.</li>
-                    <li>
+                    <li class="list-noStyle">
                         <ul>
                             <li><strong>This is how the strong element renders</strong></li>
                         </ul>
                     </li>
                     <li><strong>&lt;strong&gt;</strong> = Represents text that is distinct from main text due to strong importance, displayed in bold text as default.</li>
-                    <li>
+                    <li class="list-noStyle">
                         <ul>
                             <li><strong>This is how the strong element renders</strong></li>
                         </ul>
                     </li>
                     <li><strong>&lt;u&gt;</strong> = Represents text that is distinct from main text and displayed with an underline.</li>
-                    <li>
+                    <li class="list-noStyle">
                         <ul>
                             <li><u>This is how the u element renders</u></li>
                         </ul>
@@ -353,13 +353,13 @@
                 <ul>
                     <li>To ensure site accessibility all videos within the site should have captions which describe what is happening or being said within the video.</li>
                     <li>To implement this the <strong>&lt;track&gt;</strong> element should be placed inside the video element along with the source elements.</li>
-                    <li>
+                    <li class="list-noStyle">
                         <ul>
                             <li><code>&lt;track label="English" kind="subtitles" srclang="en" src="captions.vtt" default&gt; </code></li>
                         </ul>
                     </li>
                     <li>A captions file also needs to be linked as a source within this track element, this requires a specific format and the caption text within.</li>
-                    <li>
+                    <li class="list-noStyle">
                         <ul>
                             <li><code>WEBVTT 00:01.000 --&gt; 00:04.000 Captions between the first second to the fourth.</code></li>
                         </ul>
@@ -413,7 +413,7 @@
                 <img src="img/buttonGif.gif" class="small-img" alt="Screen recording showing the button hover interaction">
                 <p>I then implemented the navigation link underline using both the :before and :hover pseudo elements. To do this within the CSS I added the <code>nav a:before </code> selector with the following style to create the underline effect:</p>
                 <ul>
-                    <li> content: ""; position: absolute; width: 100%; height: 2px; bottom: -5px; border-bottom: 2px solid #EC644B; transform: scale(0,1); transition: transform 0.2s;</li>
+                    <li><code>content: ""; position: absolute; width: 100%; height: 2px; bottom: -5px; border-bottom: 2px solid #EC644B; transform: scale(0,1); transition: transform 0.2s;</code></li>
                 </ul>
                 <p>Next I needed to add the hover to the link so that the before element would change style, for this I used <code>nav a:hover:before { transform: scale(1);}</code> which scales the underline from 0 to 1 once hovered over.</p>
                 <img src="img/underlineGif.gif" class="small-img" alt="Screen recording showing the underline hover interaction">
@@ -461,27 +461,36 @@
                 <h3>Log Entry - 5/2/17</h3>
                 <h4>HTML Validation</h4>
                 <p>To ensure that the website has been coded correctly I used W3's HTML validator which identifies errors within the HTML where its usage doesn't match W3's HTML specification.</p>
+                <img src="img/validation.jpg" alt="Image showing validation of the log page.">
                 <p>After using the validator it found various errors and warnings on the HTML being used in this log page but with no errors on the other pages. Due to these errors I researched the correct usage for these elements based on the errors, which
                     identified incorrect usage of the ul, li and code elements.</p>
                 <p>The first issue identified by the validator was incorrect nesting of ul elements at one of the earlier log entries as I had directly added ul as a child of ul which both the validator and W3 specification state not to do as the only child
                     of a ul element are li. Once I fixed this by moving all nested lists inside new li elements I needed to fix a similar issue with the code element where I had place them as a direct child of a ul, which again is invalid html and was
                     easily fixed by placing them within li elements.</p>
+                <p>After implementing this i found that this nesting creates a list bullet point where the nested list starts which didn't look good and makes following the flow of the list difficult. But this was easily fixed by placing a css style on the <strong><code>&lt;li&gt;</code></strong> element that the nested list starts on. This style includes the <code>list-style: none;</code> rule which removes this bullet point for the nested list.</p>
                 <ul>
                     <li><strong>Invalid ul nesting</strong></li>
-                    <li><code>&lt;ul&gt;</code></li>
-                    <li><code>&nbsp;&nbsp;&nbsp;&lt;ul&gt;</code></li>
-                    <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;</code></li>
-                    <li><code>&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</code></li>
-                    <li><code>&lt;/ul&gt;</code></li>
+                    <li class="list-noStyle"><code>&lt;ul&gt;</code></li>
+                    <li class="list-noStyle"><code>&nbsp;&nbsp;&nbsp;&lt;ul&gt;</code></li>
+                    <li class="list-noStyle"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;</code></li>
+                    <li class="list-noStyle"><code>&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</code></li>
+                    <li class="list-noStyle"><code>&lt;/ul&gt;</code></li>
                 </ul>
                 <ul>
                     <li><strong>Valid ul nesting</strong></li>
-                    <li><code>&lt;ul&gt;</code></li>
-                    <li><code>&nbsp;&nbsp;&nbsp;&lt;li&gt;</code></li>
-                    <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;</code></li>
-                    <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</code></li>
-                    <li><code>&nbsp;&nbsp;&nbsp;&lt;/li&gt;</code></li>
-                    <li><code>&lt;/ul&gt;</code></li>
+                    <li class="list-noStyle"><code>&lt;ul&gt;</code></li>
+                    <li class="list-noStyle"><code>&nbsp;&nbsp;&nbsp;&lt;li&gt;</code></li>
+                    <li class="list-noStyle"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;</code></li>
+                    <li class="list-noStyle"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</code></li>
+                    <li class="list-noStyle"><code>&nbsp;&nbsp;&nbsp;&lt;/li&gt;</code></li>
+                    <li class="list-noStyle"><code>&lt;/ul&gt;</code></li>
+                </ul>
+                <p>My second issue was that I had not used heading element to define a <strong><code>&lt;article&gt;</code></strong> or <strong><code>&lt;section&gt;</code></strong>, this is due to the semantice meaning of these tags. This was a large issue that affected all pages multiple times but was easily fixed by moving existing headers into the elements or creating new headers.</p>
+                <p>I also found many small issues and errors within site from the validator, these have been listed below, these were easily fixed but taught me to be more careful when wrapping many tags around each other.</p>
+                <ul>
+                  <li>Missing close tags for p, code, li elements </li>
+                  <li>Missing alt tags for images</li>
+                  <li>Wrapping code around li elements</li>
                 </ul>
                 <p>Researching the HTML specification to fix these issues made me realise how important researching and understanding the correct HTML standards as many can potentially go unnoticed.</p>
                 <h4>Sources</h4>
@@ -515,10 +524,111 @@
             </article>
             <article class="container log-item">
                 <h3>Log Entry - 17/2/17</h3>
-                <h4>Meep</h4>
-                <p>Mep</p>
+                <h4>Creating and Implementing SVG</h4>
+                <p>Within the site I have used standard jpeg and png images so implement graphics these graphics formats are not suitable for icons and other high detail graphics. This is were SVG is suitable as it does not store each pixels colour and generate the image from those pixels but instead generates lines and shapes via code or through editing programs. This means that only the positions, size and colours of the graphics is stored allowing for the full scaling of these SVG images. This is especially useful for icons such as social media buttons as they will look good accross all screen sizes and devices.</p>
+                <p>First I created a SVG image via a free program Inkscape which allows for the graphical editing of SVG images. This image includes a desktop computer next to a monitor, these were created via the rectangle and circle elements with either full fill or a brush style for an outline.</p>
+                <img src="img/computerDrawing.png" alt="">
+                <p>SVG images can be implemented into HTML via the <strong>&lt;img&gt;</strong> element. This is done by add the SVG file address to the src attribute just as you would with a normal image file. The html used to insert the image is below as well as the implemented image.</p>
                 <ul>
-                    <li><a href="https://validator.w3.org">W3 HTML Validator</a></li>
+                  <li><code>&lt;img src="computerDrawing.svg" alt="Image of a desktop computer and monitor."&gt;</code></li>
+                </ul>
+                <img class="small-img" src="img/computer.svg" alt="Image of a desktop computer and monitor.">
+                <p>SVG can also be edited directly via XML within the HTML pages or create the SVG file externally and link it within the HTML via the <strong>&lt;object&gt;</strong> element. Below is a list of the different elements that create SVG content and the attributes used to modify them.</p>
+                <ul>
+                  <li><strong>&lt;svg&gt;</strong> = Create the SVG element in which all of the SVG content should be within.</li>
+                    <li class="list-noStyle">
+                      <ul>
+                        <li><code>&lt;width&gt;</code> = Set the width of the SVG element</li>
+                        <li><code>&lt;height&gt;</code> = Set the height of the SVG element</li>
+                      </ul>
+                    </li>
+                  <li><strong>All graphics element attributes</strong></li>
+                    <li class="list-noStyle">
+                      <ul>
+                        <li><code>&lt;style&gt;</code> = Set the style of the element, using parameters including fill, stroke, stroke-width.</li>
+                        <li><code>&lt;class&gt;</code> = Set the element's class which is used to style the element.</li>
+                      </ul>
+                    </li>
+                  <li><strong>&lt;circle&gt;</strong> = Create a SVG circle element.</li>
+                    <li class="list-noStyle">
+                      <ul>
+                        <li><code>&lt;cx&gt;</code> = Sets on the x-axis coordinate the centre of the circle.</li>
+                        <li><code>&lt;cy&gt;</code> = Sets on the y-axis coordinate the centre of the circle.</li>
+                        <li><code>&lt;r&gt;</code> = Set the circles radius</li>
+                      </ul>
+                    </li>
+                  <li><strong>&lt;rect&gt;</strong> = Create a SVG rectangle element.</li>
+                    <li class="list-noStyle">
+                      <ul>
+                        <li><code>&lt;x&gt;</code> = Set on the x-axis coordinate the rectangle's top left corner.</li>
+                        <li><code>&lt;y&gt;</code> = Set on the y-axis coordinate the rectangle's top left corner.</li>
+                        <li><code>&lt;rx&gt;</code> = Set on the x-axis the rectangle's corner.</li>
+                        <li><code>&lt;ry&gt;</code> = Set on the y-axis the rectangle's corner.</li>
+                        <li><code>&lt;width&gt;</code> = Set the rectangles width.</li>
+                        <li><code>&lt;height&gt;</code> = Set the rectangles height.</li>
+                      </ul>
+                    </li>
+                  <li><strong>&lt;polygon&gt;</strong> = Create a SVG polygon element, which is a close shape of connected straight lines.</li>
+                    <li class="list-noStyle">
+                      <ul>
+                        <li><code>&lt;points&gt;</code> = Set the x and y location of each point.</li>
+                      </ul>
+                    </li>
+                  <li><strong>&lt;ellipse&gt;</strong> = Create a SVG ellipse element.</li>
+                    <li class="list-noStyle">
+                      <ul>
+                        <li><code>&lt;cx&gt;</code> = Sets on the x-axis the centre of the ellipse.</li>
+                        <li><code>&lt;cy&gt;</code> = Sets on the y-axis the centre of the ellipse.</li>
+                        <li><code>&lt;rx&gt;</code> = Set the ellipse's x radius.</li>
+                        <li><code>&lt;ry&gt;</code> = Set the ellipse's y radius.</li>
+                      </ul>
+                    </li>
+                  <li><strong>&lt;line&gt;</strong> = Create a SVG line element, which creates a line between two specified points.</li>
+                    <li class="list-noStyle">
+                      <ul>
+                        <li><code>&lt;x1&gt;</code> = Set on the x-axis the location of the first point.</li>
+                        <li><code>&lt;x2&gt;</code> = Set on the x-axis the location of the second point.</li>
+                        <li><code>&lt;y1&gt;</code> = Set on the y-axis the location of the first point.</li>
+                        <li><code>&lt;y1&gt;</code> = Set on the y-axis the location of the second  point.</li>
+                      </ul>
+                  </li>
+                  <li><strong>&lt;text&gt;</strong> = Create a SVG text element, the text is placed within the two tags.</li>
+                    <li class="list-noStyle">
+                      <ul>
+                        <li><code>&lt;x&gt;</code> =  Set on the x-axis coordinate the text's top left corner.</li>
+                        <li><code>&lt;y&gt;</code> =  Set on the y-axis coordinate the text's top left corner.</li>
+                        <li><code>&lt;text-anchor&gt;</code> = Set the text's alignment either to the start, middle or end of the text element</li>
+                      </ul>
+                    </li>
+                </ul>
+                <p>Below is the xml for a rounded rectangle with a fill of red and a black stroke of width 1 around the rectangle.</p>
+                <ul>
+                  <li><code>&lt;svg width="200" height="100" xmlns="http://www.w3.org/2000/svg"&gt;</code></li>
+                  <li><code>&lt;rect x="50" y="10" rx="10" ry="10" width="80" height="80"
+                  style="fill:red;stroke:black;stroke-width:1;"/&gt;</code></li>
+                  <li><code>&lt;/svg&gt;</code></li>
+                </ul>
+                <p>Below is this rounded rectangle inserted via the <strong>&lt;object&gt;</strong> element.</p>
+                <ul>
+                  <li><code>&lt;object type="image/svg+xml" data="img/roundRect.svg" class="list-noStyle"&gt;&lt;/object&gt;</code></li>
+                </ul>
+                <object type="image/svg+xml" data="img/roundRect.svg" class="list-noStyle">
+                  Image of a rounded rectangle demonstrating svg.
+                </object>
+                <p>SVG objects can also be directly styled via CSS. In the example below I have used a css class and element reference to style the background of the svg element to a peach colour and changed the rectangle width to 40 pixels.</p>
+                <ul>
+                  <li><code>svg &gt; rect { width: 40px; }</code></li>
+                </ul>
+                <svg class="svg-example" width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="10" rx="10" ry="10" width="80" height="80"
+                    style="fill:red;stroke:black;stroke-width:1;"/>
+                </svg>
+                <h4>Sources</h4>
+                <ul>
+                    <li><a href="https://www.w3.org/TR/SVG/">W3C SVG Guide</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content">MDN Inserting SVG into HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute">MDN SVG Attribute References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element">MDN SVG Element References</a></li>
                 </ul>
             </article>
         </section>
