@@ -203,8 +203,8 @@
                 </ul>
                 <h4>Sources</h4>
                 <ul>
-                  <li><a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/a">MDN a Element</a></li>
-                  <li><a href="https://dev.w3.org/html5/spec-preview/the-a-element.html">W3 a element</a></li>
+                    <li><a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/a">MDN a Element</a></li>
+                    <li><a href="https://dev.w3.org/html5/spec-preview/the-a-element.html">W3 a element</a></li>
                 </ul>
             </article>
             <article class="container log-item">
@@ -323,8 +323,8 @@
                 <h4>Discovery Log Markup</h4>
                 <p>During the transfer and markup of the discovery log to this website I noticed that I would need to show the html code within the log. This is a problem as &lt; and &gt; symbols are automatically interpreted by html as tags even when they
                     are being used to provide code examples. This meant I had to research methods of fixing this issue.</p>
-                <p> During my research I found the <strong>&lt;code&gt;</strong> element, this represents a section of code, displayed in the monospace font by default. Once I learnt about this element I replaced all html code examples with this element to improve
-                    the presentation of the log and making it easier to understand what text is code.</p>
+                <p> During my research I found the <strong>&lt;code&gt;</strong> element, this represents a section of code, displayed in the monospace font by default. Once I learnt about this element I replaced all html code examples with this element to
+                    improve the presentation of the log and making it easier to understand what text is code.</p>
                 <p>Next I needed to research how to place &lt; and &gt; symbols without them being interpreted as html tags. Based on my research I found out about html character references, this allows the placement of text symbols including less than and
                     greather than symbols.</p>
                 <p>Symbols include:</p>
@@ -467,7 +467,8 @@
                 <p>The first issue identified by the validator was incorrect nesting of ul elements at one of the earlier log entries as I had directly added ul as a child of ul which both the validator and W3 specification state not to do as the only child
                     of a ul element are li. Once I fixed this by moving all nested lists inside new li elements I needed to fix a similar issue with the code element where I had place them as a direct child of a ul, which again is invalid html and was
                     easily fixed by placing them within li elements.</p>
-                <p>After implementing this i found that this nesting creates a list bullet point where the nested list starts which didn't look good and makes following the flow of the list difficult. But this was easily fixed by placing a css style on the <strong><code>&lt;li&gt;</code></strong> element that the nested list starts on. This style includes the <code>list-style: none;</code> rule which removes this bullet point for the nested list.</p>
+                <p>After implementing this i found that this nesting creates a list bullet point where the nested list starts which didn't look good and makes following the flow of the list difficult. But this was easily fixed by placing a css style on the
+                    <strong><code>&lt;li&gt;</code></strong> element that the nested list starts on. This style includes the <code>list-style: none;</code> rule which removes this bullet point for the nested list.</p>
                 <ul>
                     <li><strong>Invalid ul nesting</strong></li>
                     <li class="list-noStyle"><code>&lt;ul&gt;</code></li>
@@ -485,12 +486,13 @@
                     <li class="list-noStyle"><code>&nbsp;&nbsp;&nbsp;&lt;/li&gt;</code></li>
                     <li class="list-noStyle"><code>&lt;/ul&gt;</code></li>
                 </ul>
-                <p>My second issue was that I had not used heading element to define a <strong><code>&lt;article&gt;</code></strong> or <strong><code>&lt;section&gt;</code></strong>, this is due to the semantice meaning of these tags. This was a large issue that affected all pages multiple times but was easily fixed by moving existing headers into the elements or creating new headers.</p>
+                <p>My second issue was that I had not used heading element to define a <strong><code>&lt;article&gt;</code></strong> or <strong><code>&lt;section&gt;</code></strong>, this is due to the semantice meaning of these tags. This was a large issue
+                    that affected all pages multiple times but was easily fixed by moving existing headers into the elements or creating new headers.</p>
                 <p>I also found many small issues and errors within site from the validator, these have been listed below, these were easily fixed but taught me to be more careful when wrapping many tags around each other.</p>
                 <ul>
-                  <li>Missing close tags for p, code, li elements </li>
-                  <li>Missing alt tags for images</li>
-                  <li>Wrapping code around li elements</li>
+                    <li>Missing close tags for p, code, li elements </li>
+                    <li>Missing alt tags for images</li>
+                    <li>Wrapping code around li elements</li>
                 </ul>
                 <p>Researching the HTML specification to fix these issues made me realise how important researching and understanding the correct HTML standards as many can potentially go unnoticed.</p>
                 <h4>Sources</h4>
@@ -505,13 +507,20 @@
             <article class="container log-item">
                 <h3>Log Entry - 12/2/17</h3>
                 <h4>Further accessibility research and implementation </h4>
-                <p>While I had placed some accessibility features such as the video subtitles, arial labels and alt tags onto the site I didn't fully meet the W3 Web Content Accessibility Guidelines(WCAG). These guidlines are based on the POUR acronym which stand for <strong>Perceivable Operable Understandable Robust</strong> which contain recommendations for website design, styling and structure to ensure accessibility for all disabilities.</p>
+                <p>While I had placed some accessibility features such as the video subtitles, arial labels and alt tags onto the site I didn't fully meet the W3 Web Content Accessibility Guidelines(WCAG). These guidlines are based on the POUR acronym which
+                    stand for <strong>Perceivable Operable Understandable Robust</strong> which contain recommendations for website design, styling and structure to ensure accessibility for all disabilities.</p>
                 <p>To ensure that my website meets these guidelines I researched and used a variety of tools.</p>
-                <p>The first being the <strong>AChecker Web Accessibility Checker</strong> which allows you to input a website and have it automatically checked against the WCAG and display errors where the website doesn't match the guidlines. These errors include known problems which is code that definitely don't meet the guidelines, likely problems which are likely to be an accessibility issue, and lastly potential problems which includes problems that should be checked over to see if they could be an issue. After testing all the pages I created a list of the problems that should be fixed, I then used this list to fix any of the issues which included missing alt tags, I elements which I replaced with em elements and not meaningful link text. This will be mainly important users with screen readers and phyiscal disabilities affecting how they read and interact with the page.</p>
+                <p>The first being the <strong>AChecker Web Accessibility Checker</strong> which allows you to input a website and have it automatically checked against the WCAG and display errors where the website doesn't match the guidlines. These errors
+                    include known problems which is code that definitely don't meet the guidelines, likely problems which are likely to be an accessibility issue, and lastly potential problems which includes problems that should be checked over to see
+                    if they could be an issue. After testing all the pages I created a list of the problems that should be fixed, I then used this list to fix any of the issues which included missing alt tags, I elements which I replaced with em elements
+                    and not meaningful link text. This will be mainly important users with screen readers and phyiscal disabilities affecting how they read and interact with the page.</p>
                 <img src="img/accessibility1.png" alt="Image showing the results of the accessibility checker">
-                <p>Next I used the <strong>Color Oracle colour blindness simulator</strong> which is program that allows you to view you screen from three different types of colour blindness. I used this tool to view my website which focuses on a light red as the accent colour, and with the main type of colour blindness Deuteranomaly which causes the red to turn to a light brown and green mix. But due to the websites design no colour specific messages are used (e.g red for warning, green for successfull action), this means that the website's functionality is not impacted by colour blindness.</p>
+                <p>Next I used the <strong>Color Oracle colour blindness simulator</strong> which is program that allows you to view you screen from three different types of colour blindness. I used this tool to view my website which focuses on a light red
+                    as the accent colour, and with the main type of colour blindness Deuteranomaly which causes the red to turn to a light brown and green mix. But due to the websites design no colour specific messages are used (e.g red for warning, green
+                    for successfull action), this means that the website's functionality is not impacted by colour blindness.</p>
                 <img src="img/accessibility2.jpg" alt="Image showing the results of the colour blindness simulator on the website's about me page">
-                <p>Lastly i used the <strong>Coblis Colour Blindness simulator </strong> to test if all my images are understandable for colour blind users. This online tool allows you to test uploaded images with the different colour bliness types seperately and together to ensure that all possible combinations makes sense. With this tool I tested most of the website's images that use large amounts of colour to ensure that they would still be understable by colourblind users. </p>
+                <p>Lastly i used the <strong>Coblis Colour Blindness simulator </strong> to test if all my images are understandable for colour blind users. This online tool allows you to test uploaded images with the different colour bliness types seperately
+                    and together to ensure that all possible combinations makes sense. With this tool I tested most of the website's images that use large amounts of colour to ensure that they would still be understable by colourblind users. </p>
                 <img src="img/accessibility3.png" alt="Image showing the results of the colour blindness simulator on the website's main background image">
                 <h4>Sources</h4>
                 <ul>
@@ -525,99 +534,118 @@
             <article class="container log-item">
                 <h3>Log Entry - 17/2/17</h3>
                 <h4>Creating and Implementing SVG</h4>
-                <p>Within the site I have used standard jpeg and png images so implement graphics these graphics formats are not suitable for icons and other high detail graphics. This is were SVG is suitable as it does not store each pixels colour and generate the image from those pixels but instead generates lines and shapes via code or through editing programs. This means that only the positions, size and colours of the graphics is stored allowing for the full scaling of these SVG images. This is especially useful for icons such as social media buttons as they will look good accross all screen sizes and devices.</p>
-                <p>First I created a SVG image via a free program Inkscape which allows for the graphical editing of SVG images. This image includes a desktop computer next to a monitor, these were created via the rectangle and circle elements with either full fill or a brush style for an outline.</p>
+                <p>Within the site I have used standard jpeg and png images so implement graphics these graphics formats are not suitable for icons and other high detail graphics. This is were SVG is suitable as it does not store each pixels colour and generate
+                    the image from those pixels but instead generates lines and shapes via code or through editing programs. This means that only the positions, size and colours of the graphics is stored allowing for the full scaling of these SVG images.
+                    This is especially useful for icons such as social media buttons as they will look good accross all screen sizes and devices.</p>
+                <p>First I created a SVG image via a free program Inkscape which allows for the graphical editing of SVG images. This image includes a desktop computer next to a monitor, these were created via the rectangle and circle elements with either
+                    full fill or a brush style for an outline.</p>
                 <img src="img/computerDrawing.png" alt="">
-                <p>SVG images can be implemented into HTML via the <strong>&lt;img&gt;</strong> element. This is done by add the SVG file address to the src attribute just as you would with a normal image file. The html used to insert the image is below as well as the implemented image.</p>
+                <p>SVG images can be implemented into HTML via the <strong>&lt;img&gt;</strong> element. This is done by add the SVG file address to the src attribute just as you would with a normal image file. The html used to insert the image is below
+                    as well as the implemented image.</p>
                 <ul>
-                  <li><code>&lt;img src="computerDrawing.svg" alt="Image of a desktop computer and monitor."&gt;</code></li>
+                    <li><code>&lt;img src="computerDrawing.svg" alt="Image of a desktop computer and monitor."&gt;</code></li>
                 </ul>
                 <img class="small-img" src="img/computer.svg" alt="Image of a desktop computer and monitor.">
-                <p>SVG can also be edited directly via XML within the HTML pages or create the SVG file externally and link it within the HTML via the <strong>&lt;object&gt;</strong> element. Below is a list of the different elements that create SVG content and the attributes used to modify them.</p>
+                <p>SVG can also be edited directly via XML within the HTML pages or create the SVG file externally and link it within the HTML via the <strong>&lt;object&gt;</strong> element. Below is a list of the different elements that create SVG content
+                    and the attributes used to modify them.</p>
                 <ul>
-                  <li><strong>&lt;svg&gt;</strong> = Create the SVG element in which all of the SVG content should be within.</li>
+                    <li><strong>&lt;svg&gt;</strong> = Create the SVG element in which all of the SVG content should be within.</li>
                     <li class="list-noStyle">
-                      <ul>
-                        <li><code>&lt;width&gt;</code> = Set the width of the SVG element</li>
-                        <li><code>&lt;height&gt;</code> = Set the height of the SVG element</li>
-                      </ul>
+                        <ul>
+                            <li><code>&lt;width&gt;</code> = Set the width of the SVG element</li>
+                            <li><code>&lt;height&gt;</code> = Set the height of the SVG element</li>
+                        </ul>
                     </li>
-                  <li><strong>All graphics element attributes</strong></li>
+                </ul>
+                <ul>
+                    <li><strong>All graphics element attributes</strong></li>
                     <li class="list-noStyle">
-                      <ul>
-                        <li><code>&lt;style&gt;</code> = Set the style of the element, using parameters including fill, stroke, stroke-width.</li>
-                        <li><code>&lt;class&gt;</code> = Set the element's class which is used to style the element.</li>
-                      </ul>
+                        <ul>
+                            <li><code>&lt;style&gt;</code> = Set the style of the element, using parameters including fill, stroke, stroke-width.</li>
+                            <li><code>&lt;class&gt;</code> = Set the element's class which is used to style the element.</li>
+                        </ul>
                     </li>
-                  <li><strong>&lt;circle&gt;</strong> = Create a SVG circle element.</li>
+                </ul>
+                <ul>
+                    <li><strong>&lt;circle&gt;</strong> = Create a SVG circle element.</li>
                     <li class="list-noStyle">
-                      <ul>
-                        <li><code>&lt;cx&gt;</code> = Sets on the x-axis coordinate the centre of the circle.</li>
-                        <li><code>&lt;cy&gt;</code> = Sets on the y-axis coordinate the centre of the circle.</li>
-                        <li><code>&lt;r&gt;</code> = Set the circles radius</li>
-                      </ul>
+                        <ul>
+                            <li><code>&lt;cx&gt;</code> = Sets on the x-axis coordinate the centre of the circle.</li>
+                            <li><code>&lt;cy&gt;</code> = Sets on the y-axis coordinate the centre of the circle.</li>
+                            <li><code>&lt;r&gt;</code> = Set the circles radius</li>
+                        </ul>
                     </li>
-                  <li><strong>&lt;rect&gt;</strong> = Create a SVG rectangle element.</li>
+                </ul>
+                <ul>
+                    <li><strong>&lt;rect&gt;</strong> = Create a SVG rectangle element.</li>
                     <li class="list-noStyle">
-                      <ul>
-                        <li><code>&lt;x&gt;</code> = Set on the x-axis coordinate the rectangle's top left corner.</li>
-                        <li><code>&lt;y&gt;</code> = Set on the y-axis coordinate the rectangle's top left corner.</li>
-                        <li><code>&lt;rx&gt;</code> = Set on the x-axis the rectangle's corner.</li>
-                        <li><code>&lt;ry&gt;</code> = Set on the y-axis the rectangle's corner.</li>
-                        <li><code>&lt;width&gt;</code> = Set the rectangles width.</li>
-                        <li><code>&lt;height&gt;</code> = Set the rectangles height.</li>
-                      </ul>
+                        <ul>
+                            <li><code>&lt;x&gt;</code> = Set on the x-axis coordinate the rectangle's top left corner.</li>
+                            <li><code>&lt;y&gt;</code> = Set on the y-axis coordinate the rectangle's top left corner.</li>
+                            <li><code>&lt;rx&gt;</code> = Set on the x-axis the rectangle's corner.</li>
+                            <li><code>&lt;ry&gt;</code> = Set on the y-axis the rectangle's corner.</li>
+                            <li><code>&lt;width&gt;</code> = Set the rectangles width.</li>
+                            <li><code>&lt;height&gt;</code> = Set the rectangles height.</li>
+                        </ul>
                     </li>
-                  <li><strong>&lt;polygon&gt;</strong> = Create a SVG polygon element, which is a close shape of connected straight lines.</li>
+                </ul>
+                <ul>
+                    <li><strong>&lt;polygon&gt;</strong> = Create a SVG polygon element, which is a close shape of connected straight lines.</li>
                     <li class="list-noStyle">
-                      <ul>
-                        <li><code>&lt;points&gt;</code> = Set the x and y location of each point.</li>
-                      </ul>
+                        <ul>
+                            <li><code>&lt;points&gt;</code> = Set the x and y location of each point.</li>
+                        </ul>
                     </li>
-                  <li><strong>&lt;ellipse&gt;</strong> = Create a SVG ellipse element.</li>
+                </ul>
+                <ul>
+                    <li><strong>&lt;ellipse&gt;</strong> = Create a SVG ellipse element.</li>
                     <li class="list-noStyle">
-                      <ul>
-                        <li><code>&lt;cx&gt;</code> = Sets on the x-axis the centre of the ellipse.</li>
-                        <li><code>&lt;cy&gt;</code> = Sets on the y-axis the centre of the ellipse.</li>
-                        <li><code>&lt;rx&gt;</code> = Set the ellipse's x radius.</li>
-                        <li><code>&lt;ry&gt;</code> = Set the ellipse's y radius.</li>
-                      </ul>
+                        <ul>
+                            <li><code>&lt;cx&gt;</code> = Sets on the x-axis the centre of the ellipse.</li>
+                            <li><code>&lt;cy&gt;</code> = Sets on the y-axis the centre of the ellipse.</li>
+                            <li><code>&lt;rx&gt;</code> = Set the ellipse's x radius.</li>
+                            <li><code>&lt;ry&gt;</code> = Set the ellipse's y radius.</li>
+                        </ul>
                     </li>
-                  <li><strong>&lt;line&gt;</strong> = Create a SVG line element, which creates a line between two specified points.</li>
+                </ul>
+                <ul>
+                    <li><strong>&lt;line&gt;</strong> = Create a SVG line element, which creates a line between two specified points.</li>
                     <li class="list-noStyle">
-                      <ul>
-                        <li><code>&lt;x1&gt;</code> = Set on the x-axis the location of the first point.</li>
-                        <li><code>&lt;x2&gt;</code> = Set on the x-axis the location of the second point.</li>
-                        <li><code>&lt;y1&gt;</code> = Set on the y-axis the location of the first point.</li>
-                        <li><code>&lt;y1&gt;</code> = Set on the y-axis the location of the second  point.</li>
-                      </ul>
-                  </li>
-                  <li><strong>&lt;text&gt;</strong> = Create a SVG text element, the text is placed within the two tags.</li>
+                        <ul>
+                            <li><code>&lt;x1&gt;</code> = Set on the x-axis the location of the first point.</li>
+                            <li><code>&lt;x2&gt;</code> = Set on the x-axis the location of the second point.</li>
+                            <li><code>&lt;y1&gt;</code> = Set on the y-axis the location of the first point.</li>
+                            <li><code>&lt;y1&gt;</code> = Set on the y-axis the location of the second point.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><strong>&lt;text&gt;</strong> = Create a SVG text element, the text is placed within the two tags.</li>
                     <li class="list-noStyle">
-                      <ul>
-                        <li><code>&lt;x&gt;</code> =  Set on the x-axis coordinate the text's top left corner.</li>
-                        <li><code>&lt;y&gt;</code> =  Set on the y-axis coordinate the text's top left corner.</li>
-                        <li><code>&lt;text-anchor&gt;</code> = Set the text's alignment either to the start, middle or end of the text element</li>
-                      </ul>
+                        <ul>
+                            <li><code>&lt;x&gt;</code> = Set on the x-axis coordinate the text's top left corner.</li>
+                            <li><code>&lt;y&gt;</code> = Set on the y-axis coordinate the text's top left corner.</li>
+                            <li><code>&lt;text-anchor&gt;</code> = Set the text's alignment either to the start, middle or end of the text element</li>
+                        </ul>
                     </li>
                 </ul>
                 <p>Below is the xml for a rounded rectangle with a fill of red and a black stroke of width 1 around the rectangle.</p>
                 <ul>
-                  <li><code>&lt;svg width="200" height="100" xmlns="http://www.w3.org/2000/svg"&gt;</code></li>
-                  <li><code>&lt;rect x="50" y="10" rx="10" ry="10" width="80" height="80"
+                    <li><code>&lt;svg width="200" height="100" xmlns="http://www.w3.org/2000/svg"&gt;</code></li>
+                    <li><code>&lt;rect x="50" y="10" rx="10" ry="10" width="80" height="80"
                   style="fill:red;stroke:black;stroke-width:1;"/&gt;</code></li>
-                  <li><code>&lt;/svg&gt;</code></li>
+                    <li><code>&lt;/svg&gt;</code></li>
                 </ul>
                 <p>Below is this rounded rectangle inserted via the <strong>&lt;object&gt;</strong> element.</p>
                 <ul>
-                  <li><code>&lt;object type="image/svg+xml" data="img/roundRect.svg" class="list-noStyle"&gt;&lt;/object&gt;</code></li>
+                    <li><code>&lt;object type="image/svg+xml" data="img/roundRect.svg" class="list-noStyle"&gt;&lt;/object&gt;</code></li>
                 </ul>
                 <object type="image/svg+xml" data="img/roundRect.svg" class="list-noStyle">
                   Image of a rounded rectangle demonstrating svg.
                 </object>
                 <p>SVG objects can also be directly styled via CSS. In the example below I have used a css class and element reference to style the background of the svg element to a peach colour and changed the rectangle width to 40 pixels.</p>
                 <ul>
-                  <li><code>svg &gt; rect { width: 40px; }</code></li>
+                    <li><code>svg &gt; rect { width: 40px; }</code></li>
                 </ul>
                 <svg class="svg-example" width="200" height="100" xmlns="http://www.w3.org/2000/svg">
                     <rect x="50" y="10" rx="10" ry="10" width="80" height="80"
