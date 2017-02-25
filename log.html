@@ -662,9 +662,37 @@
             <article class="container log-item">
                 <h3>Log Entry - 25/2/17</h3>
                 <h4>Implementing google fonts</h4>
-                <p>Implementing fonts</p>
-                <h4>Font styling</h4>
-                <p>How to style fonts</p>
+                <p>For the websites fonts I needed a font with a blockly bold style for the page titles and a thing font for the main page text ensuring a strong contrast between the pages text and titles. Due to this none of the standard fonts were suitable, instead I searched on the Google Fonts service to find suitable fonts, based on this I found the following fonts: Open Sans, Nunito Sans, Roboto and Montserrat. After analysis of these fonts I found Nunito Sans to be the most suitable font, next I needed to embed this font onto all pages in the website.</p>
+                <p>To embed the font I used the following HTML and CSS code within all of the website's pages and style sheets.</p>
+                <ul>
+                  <li><code>&lt;link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet"&gt;</code></li>
+                  <li><code>font-family: 'Nunito Sans', sans-serif;</code></li>
+                </ul>
+                <p>With the fonts now installed I needed to style the fonts to meet the pages planned design, this is achieved with the following CSS styles.</p>
+                <ul>
+                  <li><code><strong>font-weight</strong></code> = Specify the font's boldness depending on the available styles, including normal, bold and from numbers 100 to 900.</li>
+                  <li><code><strong>font-size</strong></code> = Specify the font's size with many different absolute, relative, and global values.</li>
+                  <li class="list-noStyle">
+                    <ul>
+                      <li><code>px</code></li>
+                      <li><code>em</code></li>
+                      <li><code>%</code></li>
+                      <li><code>inherit</code></li>
+                      <li><code>initial</code></li>
+                      <li><code>unset</code></li>
+                      <li><code>smaller</code></li>
+                      <li><code>larger</code></li>
+                    </ul>
+                  </li>
+                  <li><code><strong>font-style</strong></code> = Specify the font's style including, normal, italic, and oblique</li>
+                </ul>
+                <h4>Sources</h4>
+                <ul>
+                    <li><a href="https://fonts.google.com/">Google Fonts</a></li>
+                    <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/font-weight">MDN font-weight Guide</a></li>
+                    <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/font-size">MDN font-size Guide</a></li>
+                    <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/font-style">MDN font-style Guide</a></li>
+                </ul>
             </article>
         </section>
 
