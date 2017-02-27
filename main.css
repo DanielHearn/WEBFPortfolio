@@ -42,7 +42,8 @@ nav {
     padding-left: 5%;
     padding-top: 0.6em; }
     nav section #initials {
-      font-size: 2.5em;
+      font-size: 2em;
+      line-height: 1.75em;
       font-weight: 300;
       margin: 0;
       float: left;
@@ -232,7 +233,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   body #overlay.active {
     visibility: hidden; } }
 
-@media (max-width: 660px), (max-height: 400px) {
+@media (max-width: 725px), (max-height: 400px) {
   body h1 {
     font-size: 2.3em; }
   body h2 {
