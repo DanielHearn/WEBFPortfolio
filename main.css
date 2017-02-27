@@ -121,7 +121,7 @@ main {
 .list-noStyle {
   list-style: none; }
 
-.svg-example {
+#svg-example {
   background: #ff9966; }
 
 svg > rect {
