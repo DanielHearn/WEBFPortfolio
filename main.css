@@ -25,8 +25,9 @@ body {
     font-size: 1.1em; }
   body img, body video {
     width: 80%; }
-  body q {
-    font-style: italic; }
+  body blockquote {
+    font-style: italic;
+    margin-left: 0; }
 
 nav {
   background: #22313F;
