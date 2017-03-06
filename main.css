@@ -68,7 +68,8 @@ nav {
           line-height: 3em;
           text-align: center;
           position: relative;
-          font-weight: 300; }
+          font-weight: 300;
+          -webkit-backface-visibility: hidden; }
           nav section ul li a:before {
             content: "";
             position: absolute;

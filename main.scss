@@ -88,6 +88,7 @@ nav {
           text-align: center;
           position: relative;
           font-weight: 300;
+          -webkit-backface-visibility: hidden;
           &:before {
             content: "";
             position: absolute;
